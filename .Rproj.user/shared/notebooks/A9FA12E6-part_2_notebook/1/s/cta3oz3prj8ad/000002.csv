@@ -1,0 +1,4 @@
+"0","#Remove id variable as it's an identifier variable"
+"0","students <-"
+"0","students %>%"
+"0","  select(-X1)"

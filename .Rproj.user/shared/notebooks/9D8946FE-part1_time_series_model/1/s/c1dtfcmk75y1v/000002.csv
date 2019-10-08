@@ -1,0 +1,8 @@
+"0","#Group apps by month as day doesn't work"
+"0","monthly_completions <- "
+"0","three_year_app_values %>%"
+"0","  mutate(month_year = paste(year, month, sep = "" "")) %>%"
+"0","  group_by(month_year) %>%"
+"0","  summarise(month_completions = sum(goal9Completions))"
+"0",""
+"0","month <- monthly_completions$month_completions"

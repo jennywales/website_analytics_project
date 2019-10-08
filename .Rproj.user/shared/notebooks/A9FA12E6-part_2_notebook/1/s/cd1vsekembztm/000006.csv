@@ -1,0 +1,3 @@
+"0","#Check for na in job title"
+"0","students %>%"
+"0","  filter(is.na(job_title))"

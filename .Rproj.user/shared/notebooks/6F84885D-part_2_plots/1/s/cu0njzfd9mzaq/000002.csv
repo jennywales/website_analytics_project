@@ -1,0 +1,7 @@
+"0","#Get botton 5 and create wordcloud?"
+"0","sector_totals %>%"
+"0","  tail(5) %>%"
+"0","  ggplot(aes(label = industry, size = count, colour = industry)) +"
+"0","  geom_text_wordcloud() +"
+"0","  scale_color_brewer(palette = 3) +"
+"0","  theme(panel.background = element_rect(fill = ""white""))"

@@ -1,0 +1,8 @@
+"0","#Find hiring trend over time"
+"0","trends_sector <-"
+"0","students_companies %>%"
+"0","  filter(!is.na(year)) %>%"
+"0","  filter(!industry == ""n/a"") %>%"
+"0","  group_by(industry, year) %>%"
+"0","  summarise(count = n())"
+"0","trends_sector"

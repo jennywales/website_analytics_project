@@ -1,0 +1,2 @@
+"0","#Replace 0 ages with mean age"
+"0","students_companies$age <- ifelse(students_companies$age == 0, mean(students_companies$age), students_companies$age)"

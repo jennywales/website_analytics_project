@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1570523742753.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "C5A0CF8E",
+    "lastKnownWriteTime" : 1570464501,
+    "last_content_update" : 1570464501,
+    "path" : "~/Desktop/ga_project/documentation/part_1_doc",
+    "project_path" : "documentation/part_1_doc",
+    "properties" : {
+        "cursorPosition" : "56,49",
+        "ignored_words" : "glmulti,UserType,sessionCount,dayssincelastsession,Analytics,dayofWeek,userType,dayssinceLastSession,sessionDurationBucket,arima,recognise,Visualise,RMarkdown,synthesised,synthpop,googleAnalyticsR,Analysing,visualise\n",
+        "scrollLine" : "44"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "text"
+}

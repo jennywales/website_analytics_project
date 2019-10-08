@@ -1,0 +1,41 @@
+"0","```r
+glmulti_fit_small <- glmulti(
+  goal9Completions ~ ., 
+  data = train_small,
+  level = 2, 
+  minsize = 0, 
+  maxsize = 4, 
+  marginality = TRUE,
+  method = \"h\",
+  crit = bic, 
+  plotty = FALSE, 
+  report = TRUE, 
+  confsetsize = 100, 
+  fitfunction = lm 
+)
+```"
+"1","Initialization...
+TASK: Exhaustive screening of candidate set.
+Fitting...
+
+After 50 models:
+Best model: goal9Completions~1+date+dayofWeekName+sessions+sessions:dayofWeekName
+Crit= -82573.2323612352
+Mean crit= -81666.0372918894
+
+After 100 models:
+Best model: goal9Completions~1+month+sessions+goal3Completions+goal3Completions:month
+Crit= -82860.1044564315
+Mean crit= -81913.4199784373
+
+After 150 models:
+Best model: goal9Completions~1+month+sessions+goal3Completions+goal3Completions:month
+Crit= -82860.1044564315
+Mean crit= -82363.993918959
+
+After 200 models:
+Best model: goal9Completions~1+month+sessions+goal3Completions+goal3Completions:month
+Crit= -82860.1044564315
+Mean crit= -82531.6642671243
+Completed.
+"

@@ -1,0 +1,2 @@
+"0","#Get years from date_became_partner variable - 195 NAs - remove as no other option"
+"0","students_companies$year <- format(as.Date(students_companies$course_start_date, format=""%d/%m/%Y""),""%Y"")"

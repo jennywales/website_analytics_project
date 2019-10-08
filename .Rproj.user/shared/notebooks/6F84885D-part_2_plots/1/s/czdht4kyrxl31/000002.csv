@@ -1,0 +1,10 @@
+"0","```r
+#Make an overall gender pie chart
+jpeg(\"gender_piechart.jpg\")
+pie(total_gender$count, labels = total_gender$gender, radius = 1, 
+    col = c(\"mediumpurple1\", \"springgreen2\"))
+dev.off()
+```"
+"1","null device 
+          1 
+"

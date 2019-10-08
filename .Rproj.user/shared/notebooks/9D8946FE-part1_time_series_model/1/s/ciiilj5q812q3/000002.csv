@@ -1,0 +1,3 @@
+"0","#Predict apps - doesn't work"
+"0","pred1 <- predict(fit1, n.ahead = 365)"
+"0","ts.plot(completions_ts, pred1$pred, lty = c(1,3))"

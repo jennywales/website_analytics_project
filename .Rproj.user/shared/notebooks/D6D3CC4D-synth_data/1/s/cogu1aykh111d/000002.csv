@@ -1,0 +1,2 @@
+"0","three2 <- three_year_app_values %>%"
+"0","  dplyr::select(-c(goal9Completions, sessions, goal3Completions, goal5Completions, goal12Completions))"

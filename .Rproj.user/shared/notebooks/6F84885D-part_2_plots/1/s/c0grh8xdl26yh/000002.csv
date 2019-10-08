@@ -1,0 +1,7 @@
+"0","#Look at job titles - not really anything interesting to plot"
+"0","students_companies %>%"
+"0","  filter(!is.na(job_title)) %>%"
+"0","  filter(job_title != ""Unknown"") %>%"
+"0","  group_by(job_title, industry) %>%"
+"0","  summarise(count = n()) %>%"
+"0","  arrange(desc(count))"

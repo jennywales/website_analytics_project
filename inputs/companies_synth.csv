@@ -1,0 +1,861 @@
+X1,Partner Segmentation,Company Status,Company Size,company_ID,industry,date_became_partner,company_location
+1,Hiring Partner,Partner,Micro (0-14),company_1,Finance,25/11/2017,Laguna
+2,Hiring Partner,Partner,Small (15-49),company_2,Transportation,05/08/2019,Ankou
+3,Hiring Partner,Partner,Micro (0-14),company_3,Finance,31/12/2017,Munka-Ljungby
+4,Hiring Partner,Partner,Micro (0-14),company_4,Capital Goods,19/08/2016,Anping
+5,Hiring Partner,Partner,Large (250+),company_5,n/a,26/06/2016,Pedro Santana
+6,Hiring Partner,Partner,Micro (0-14),company_6,Capital Goods,29/08/2017,Asamankese
+7,Hiring Partner,Partner,Micro (0-14),company_7,Health Care,08/12/2018,Urengoy
+8,Hiring Partner,Partner,Medium (50-249),company_8,n/a,03/06/2016,Vänersborg
+9,Hiring Partner,Partner,Small (15-49),company_9,Finance,23/02/2019,Yoshkar-Ola
+10,Hiring Partner,Partner,Micro (0-14),company_10,Finance,23/04/2019,Hotaka
+11,Hiring Partner,Partner,Micro (0-14),company_11,n/a,29/02/2016,Shanyang
+12,Hiring Partner,Partner,Micro (0-14),company_12,Finance,28/02/2016,Chantilly
+13,Hiring Partner,Partner,Medium (50-249),company_13,Finance,16/05/2019,Elvas
+14,Client Experience,Partner,Large (250+),company_14,n/a,27/11/2018,Tsiatsan
+15,Hiring Partner,Partner,Small (15-49),company_15,Consumer Services,12/03/2017,Balangkayan
+16,Hiring Partner,Partner,Micro (0-14),company_16,Finance,05/11/2018,Bangkal
+17,Hiring Partner,Partner,Micro (0-14),company_17,Health Care,24/05/2019,Laingsburg
+18,Hiring Partner,Partner,Small (15-49),company_18,Technology,25/03/2018,Tagum
+19,Hiring Partner,Partner,Large (250+),company_19,Consumer Services,12/05/2017,Ayia Napa
+20,Hiring Partner,Partner,Medium (50-249),company_20,n/a,23/02/2018,Stockholm
+21,Hiring Partner,Partner,Micro (0-14),company_21,Finance,12/07/2016,Västra Frölunda
+22,Hiring Partner,Partner,Small (15-49),company_22,Finance,17/03/2016,Banjar Beratan
+23,Hiring Partner,Partner,Large (250+),company_23,Energy,04/11/2016,Hengqu
+24,Hiring Partner,Partner,Micro (0-14),company_24,n/a,28/07/2017,Palon
+25,Hiring Partner,Partner,Micro (0-14),company_25,Finance,22/01/2017,Darkūsh
+26,Hiring Partner,Partner,Medium (50-249),company_26,Consumer Services,16/02/2016,Brazzaville
+27,NA,Non Partner,Micro (0-14),company_27,Technology,10/03/2018,Turnišče
+28,Hiring Partner,Partner,Small (15-49),company_28,Energy,27/01/2017,Burao
+29,Hiring Partner,Partner,Small (15-49),company_29,n/a,21/04/2016,Bil‘īn
+30,Hiring Partner,Partner,Medium (50-249),company_30,Energy,24/05/2018,Ińsko
+31,Hiring Partner,Partner,Micro (0-14),company_31,n/a,23/04/2016,Quinta da Courela
+32,Hiring Partner,Partner,Micro (0-14),company_32,n/a,21/07/2016,Ipubi
+33,Hiring Partner,Partner,Micro (0-14),company_33,Finance,06/02/2017,Guimba
+34,Hiring Partner,Partner,Micro (0-14),company_34,Finance,10/04/2018,Krasnovishersk
+35,Hiring Partner,Partner,Medium (50-249),company_35,Capital Goods,24/10/2017,Paris La Défense
+36,Hiring Partner,Partner,Micro (0-14),company_36,Energy,23/09/2017,Nový Bydžov
+37,Hiring Partner,Partner,Micro (0-14),company_37,n/a,29/12/2018,Dayton
+38,Hiring Partner,Partner,Micro (0-14),company_38,Consumer Durables,18/09/2017,Vantaa
+39,Hiring Partner,Partner,Medium (50-249),company_39,Technology,08/10/2018,Paseka
+40,Hiring Partner,Partner,Small (15-49),company_40,Health Care,19/09/2017,Shanghu
+41,Hiring Partner,Partner,Large (250+),company_41,Health Care,23/06/2016,Punkaharju
+42,Hiring Partner,Partner,NA,company_42,Finance,21/05/2019,Carhuamayo
+43,Hiring Partner,Partner,Micro (0-14),company_43,n/a,12/03/2016,Amnat Charoen
+44,Hiring Partner,Partner,Micro (0-14),company_44,n/a,26/02/2016,Indralayang
+45,Hiring Partner,Partner,Micro (0-14),company_45,Capital Goods,15/03/2019,Tambaksari
+46,Influencer,Non Partner,Micro (0-14),company_46,Consumer Services,06/01/2019,Kuchurhan
+47,Hiring Partner,Partner,Micro (0-14),company_47,n/a,09/09/2017,Kesambilerenkrajan
+48,Hiring Partner,Partner,Medium (50-249),company_48,Consumer Services,11/01/2019,Shimada
+49,Hiring Partner,Partner,Micro (0-14),company_49,Consumer Services,25/05/2017,Helong
+50,Hiring Partner,Partner,Large (250+),company_50,Health Care,31/03/2016,Habry
+51,Hiring Partner,Partner,Small (15-49),company_51,Consumer Services,21/04/2017,Daijiaba
+52,Hiring Partner,Partner,Micro (0-14),company_52,Finance,10/09/2016,Stara Pazova
+53,Hiring Partner,Partner,Large (250+),company_53,n/a,28/06/2017,Misheronskiy
+54,Hiring Partner,Partner,Micro (0-14),company_54,n/a,25/10/2018,Tatou
+55,Hiring & Training,Partner,Large (250+),company_55,Transportation,14/02/2018,Dehui
+56,Hiring Partner,Partner,Large (250+),company_56,n/a,10/07/2019,Wangjing
+57,Hiring Partner,Partner,Large (250+),company_57,Finance,19/10/2017,Cabiguan
+58,Hiring Partner,Partner,Large (250+),company_58,Finance,22/05/2019,Johanneshov
+59,Hiring Partner,Partner,Small (15-49),company_59,Technology,22/06/2018,Masingbi
+60,Hiring Partner,Partner,Small (15-49),company_60,n/a,17/06/2018,Niort
+61,Hiring Partner,Partner,Small (15-49),company_61,Health Care,03/06/2017,Qusar
+62,Hiring Partner,Partner,Large (250+),company_62,Basic Industries,15/07/2019,Xiaochengzi
+63,Hiring Partner,Partner,Small (15-49),company_63,Capital Goods,06/07/2019,Hyattsville
+64,Hiring Partner,Partner,Small (15-49),company_64,Finance,24/08/2016,Caujul
+65,Hiring Partner,Partner,Micro (0-14),company_65,Technology,30/12/2017,Vista Hermosa
+66,Hiring Partner,Partner,Large (250+),company_66,Consumer Services,22/09/2017,Strážnice
+67,Hiring Partner,Partner,Medium (50-249),company_67,Health Care,01/11/2016,Barbosa
+68,Hiring Partner,Partner,Micro (0-14),company_68,Basic Industries,12/12/2016,Shchigry
+69,Hiring Partner,Partner,Micro (0-14),company_69,Capital Goods,12/07/2019,Monaragala
+70,Hiring Partner,Partner,Micro (0-14),company_70,Capital Goods,18/10/2018,Malgobek
+71,Hiring Partner,Partner,Large (250+),company_71,Finance,10/05/2018,Rato
+72,Hiring Partner,Partner,Small (15-49),company_72,Finance,23/07/2017,Tenancingo
+73,Hiring Partner,Partner,Micro (0-14),company_73,n/a,09/06/2016,Shuidong
+74,Hiring Partner,Partner,Large (250+),company_74,Energy,28/12/2018,Yako
+75,Hiring Partner,Partner,Small (15-49),company_75,n/a,21/01/2018,Privlaka
+76,Hiring Partner,Partner,Medium (50-249),company_76,Finance,05/09/2016,Jiangtian
+77,Hiring Partner,Partner,Small (15-49),company_77,Consumer Durables,07/11/2018,Amboise
+78,Hiring Partner,Non Partner,Small (15-49),company_78,Energy,24/05/2017,Kolmården
+79,Hiring Partner,Partner,Medium (50-249),company_79,n/a,04/05/2019,Osvaldo Cruz
+80,Hiring & Training,Partner,Large (250+),company_80,Finance,07/03/2016,Changjiang
+81,Hiring Partner,Partner,Micro (0-14),company_81,n/a,29/11/2018,Changtang
+82,Hiring Partner,Partner,Large (250+),company_82,Finance,30/10/2016,Xinshi
+83,Hiring Partner,Partner,Micro (0-14),company_83,Technology,11/08/2018,Oslo
+84,Hiring Partner,Partner,Medium (50-249),company_84,Technology,01/09/2018,Cholet
+85,Hiring Partner,Non Partner,Micro (0-14),company_85,n/a,15/03/2016,Raychikhinsk
+86,Hiring Partner,Partner,Micro (0-14),company_86,Consumer Non-Durables,11/05/2019,Songshi
+87,Hiring Partner,Partner,Small (15-49),company_87,n/a,19/10/2017,Samut Songkhram
+88,Hiring Partner,Partner,Large (250+),company_88,Health Care,17/10/2018,Dapdapan
+89,Hiring Partner,Non Partner,Micro (0-14),company_89,Capital Goods,06/08/2019,Malaryta
+90,Hiring Partner,Partner,Micro (0-14),company_90,Health Care,26/01/2018,Znamenskoye
+91,Hiring Partner,Partner,Micro (0-14),company_91,Finance,31/10/2017,Vårby
+92,Hiring Partner,Partner,Medium (50-249),company_92,Public Utilities,05/03/2019,Malinao
+93,Hiring Partner,Partner,Micro (0-14),company_93,Basic Industries,19/05/2017,Chilliwack
+94,Hiring Partner,Partner,Micro (0-14),company_94,n/a,25/09/2016,Vihāri
+95,Hiring Partner,Partner,Medium (50-249),company_95,n/a,09/03/2016,Misawa
+96,Hiring Partner,Partner,Small (15-49),company_96,Basic Industries,08/07/2019,Ash Sharyah
+97,Hiring Partner,Partner,Micro (0-14),company_97,Energy,16/03/2016,Tongkiling
+98,Hiring Partner,Partner,Micro (0-14),company_98,Finance,22/11/2016,Cikadu
+99,Hiring Partner,Partner,Micro (0-14),company_99,n/a,27/07/2018,Rosmalen
+100,Hiring Partner,Partner,Large (250+),company_100,Finance,11/05/2016,Sanquan
+101,Hiring Partner,Partner,Small (15-49),company_101,n/a,19/07/2019,Itinga
+102,Hiring Partner,Partner,Micro (0-14),company_102,Public Utilities,09/06/2017,Zoetermeer
+103,Hiring Partner,Partner,Micro (0-14),company_103,Miscellaneous,17/02/2019,Eleftheroúpolis
+104,Channel Partner / Advocate,Partner,Large (250+),company_104,n/a,12/10/2018,Vila Verde
+105,Hiring Partner,Partner,Micro (0-14),company_105,n/a,27/02/2017,Nanzhang Chengguanzhen
+106,Hiring Partner,Partner,Micro (0-14),company_106,Energy,20/02/2018,Kukoboy
+107,Hiring Partner,Partner,Micro (0-14),company_107,n/a,28/03/2017,Goma
+108,Hiring Partner,Partner,Micro (0-14),company_108,Consumer Services,08/07/2019,Adelaide Mail Centre
+109,Hiring Partner,Partner,Micro (0-14),company_109,n/a,21/06/2019,Baisha
+110,Hiring Partner,Partner,Micro (0-14),company_110,Basic Industries,22/05/2017,Pulilan
+111,Hiring Partner,Partner,Micro (0-14),company_111,Consumer Services,31/05/2016,Refojos de Riba de Ave
+112,Hiring Partner,Partner,Small (15-49),company_112,Public Utilities,18/04/2018,Youguzhuang
+113,Hiring Partner,Partner,Small (15-49),company_113,Finance,22/02/2018,Pasarkolot
+114,Hiring Partner,Partner,Small (15-49),company_114,n/a,22/02/2017,Gobernador Ingeniero Valentín Virasoro
+115,Hiring Partner,Partner,Micro (0-14),company_115,Technology,11/08/2017,Chuncheon
+116,Hiring Partner,Partner,Micro (0-14),company_116,Consumer Services,16/07/2017,Normandin
+117,Hiring Partner,Partner,Small (15-49),company_117,n/a,08/02/2019,Huanglong
+118,Hiring Partner,Partner,Micro (0-14),company_118,Consumer Non-Durables,06/04/2019,Newport Beach
+119,Hiring Partner,Partner,Medium (50-249),company_119,Technology,18/03/2019,Humpolec
+120,Hiring Partner,Partner,Micro (0-14),company_120,Capital Goods,28/01/2019,Līgatne
+121,Hiring Partner,Partner,Large (250+),company_121,n/a,14/10/2017,Ipameri
+122,Hiring Partner,Partner,Medium (50-249),company_122,Consumer Services,02/04/2018,Puyung
+123,Hiring Partner,Partner,Medium (50-249),company_123,n/a,25/03/2019,Pandanrejokrajan
+124,Hiring Partner,Partner,Large (250+),company_124,Technology,13/07/2018,Konče
+125,Hiring Partner,Partner,Small (15-49),company_125,Consumer Non-Durables,04/10/2016,Stockholm
+126,Hiring Partner,Partner,Micro (0-14),company_126,n/a,04/10/2017,Krajan
+127,Hiring Partner,Partner,Small (15-49),company_127,Finance,23/05/2017,Huacaschuque
+128,Hiring Partner,Partner,Medium (50-249),company_128,n/a,17/12/2016,Nové Město nad Metují
+129,Hiring Partner,Partner,Small (15-49),company_129,n/a,19/08/2016,Grodków
+130,Hiring Partner,Partner,Small (15-49),company_130,Consumer Durables,12/02/2017,Buguruslan
+131,Hiring Partner,Partner,Large (250+),company_131,n/a,07/07/2016,Velké Bílovice
+132,Hiring Partner,Partner,Large (250+),company_132,Basic Industries,06/07/2018,Voznesenskaya
+133,Hiring Partner,Partner,Micro (0-14),company_133,Finance,20/07/2019,Villa Gesell
+134,Hiring Partner,Partner,Small (15-49),company_134,Technology,14/07/2016,Mulyo
+135,Hiring Partner,Partner,Micro (0-14),company_135,Health Care,19/12/2018,Jiangshan
+136,Hiring Partner,Partner,Micro (0-14),company_136,Health Care,21/10/2017,Laranganglintong
+137,Hiring Partner,Partner,Micro (0-14),company_137,Finance,02/08/2018,Caen
+138,Hiring Partner,Partner,Micro (0-14),company_138,Energy,11/01/2019,Siem Reap
+139,Hiring Partner,Partner,Micro (0-14),company_139,Technology,02/03/2016,Hevlín
+140,Hiring Partner,Partner,Micro (0-14),company_140,Public Utilities,03/02/2018,Shatoujiao
+141,NA,Non Partner,NA,company_141,Health Care,29/09/2018,Vodňany
+142,Hiring Partner,Partner,Micro (0-14),company_142,n/a,14/06/2016,Huddinge
+143,Hiring Partner,Partner,Micro (0-14),company_143,n/a,04/05/2016,Magapit
+144,Hiring Partner,Partner,Micro (0-14),company_144,Consumer Non-Durables,01/07/2018,Kasama
+145,Hiring Partner,Partner,Medium (50-249),company_145,Consumer Services,06/10/2016,Jablonné nad Orlicí
+146,Hiring Partner,Partner,Micro (0-14),company_146,Health Care,03/10/2017,San Jose
+147,Hiring Partner,Partner,Large (250+),company_147,Technology,10/04/2016,Jeziorzany
+148,Hiring Partner,Partner,Small (15-49),company_148,Consumer Durables,24/12/2016,Sevilla
+149,Hiring Partner,Partner,Medium (50-249),company_149,Consumer Non-Durables,27/07/2018,Kompaniyivka
+150,Hiring Partner,Partner,Micro (0-14),company_150,Technology,06/02/2016,Shimen
+151,Hiring Partner,Partner,Large (250+),company_151,Basic Industries,15/07/2018,Alta Gracia
+152,NA,Non Partner,NA,company_152,Consumer Services,26/11/2018,Jiangjiazui
+153,Hiring Partner,Partner,Micro (0-14),company_153,Energy,23/04/2016,Xiawuqi
+154,NA,Non Partner,NA,company_154,Basic Industries,02/05/2016,Berón de Astrada
+155,NA,Non Partner,NA,company_155,Basic Industries,10/05/2018,Morje
+156,Hiring Partner,Partner,Micro (0-14),company_156,Consumer Services,12/02/2018,Dasht-e Qal‘ah
+157,NA,Non Partner,NA,company_157,Finance,02/04/2019,Milán
+158,NA,Non Partner,NA,company_158,Consumer Services,20/02/2018,Meliau
+159,NA,Non Partner,NA,company_159,Technology,02/02/2016,El Guapinol
+160,NA,Non Partner,NA,company_160,Energy,30/11/2016,Železniki
+161,NA,Non Partner,NA,company_161,Finance,29/07/2018,Kedungtulup
+162,Hiring Partner,Partner,Micro (0-14),company_162,Technology,01/09/2017,Ituzaingó
+163,NA,Non Partner,NA,company_163,Energy,02/04/2019,Kwikila
+164,Hiring Partner,Partner,Micro (0-14),company_164,n/a,26/05/2018,Slatina
+165,Hiring Partner,Partner,Large (250+),company_165,Finance,07/01/2017,Taitung City
+166,Hiring Partner,Partner,Medium (50-249),company_166,n/a,12/09/2018,Živinice
+167,Hiring Partner,Partner,Micro (0-14),company_167,Consumer Durables,26/02/2016,Foumbouni
+168,NA,Non Partner,NA,company_168,Finance,31/05/2018,Zhaobei
+169,NA,Non Partner,NA,company_169,Public Utilities,23/02/2018,Aswan
+170,NA,Non Partner,NA,company_170,Consumer Services,22/01/2019,Borzęcin
+171,NA,Non Partner,NA,company_171,Technology,18/02/2017,Puro Pinget
+172,NA,Non Partner,NA,company_172,Finance,16/04/2019,Rakičan
+173,NA,Non Partner,NA,company_173,Basic Industries,25/12/2018,Boracéia
+174,NA,Non Partner,NA,company_174,Capital Goods,27/09/2019,La Virgen
+175,NA,Non Partner,NA,company_175,Capital Goods,29/09/2019,Vol’sk
+176,NA,Non Partner,NA,company_176,Capital Goods,01/03/2019,Ōgaki
+177,NA,Non Partner,NA,company_177,Finance,25/06/2019,Skerries
+178,NA,Non Partner,NA,company_178,Capital Goods,24/05/2019,Yanglin
+179,NA,Non Partner,Large (250+),company_179,Basic Industries,01/04/2019,Berlin
+180,NA,Non Partner,NA,company_180,Technology,07/02/2018,Danzi
+181,NA,Non Partner,NA,company_181,n/a,26/05/2018,Joconal
+182,NA,Non Partner,NA,company_182,n/a,29/06/2017,Dŭstí
+183,NA,Non Partner,NA,company_183,n/a,10/09/2017,Houten
+184,NA,Non Partner,NA,company_184,Technology,14/04/2019,Taosha
+185,NA,Non Partner,NA,company_185,Technology,22/01/2016,Kalisangkrah Lor
+186,Hiring Partner,Partner,Small (15-49),company_186,Miscellaneous,26/04/2017,Hankazi
+187,Hiring Partner,Partner,Medium (50-249),company_187,Miscellaneous,17/01/2017,San-Pédro
+188,Hiring Partner,Partner,Micro (0-14),company_188,Miscellaneous,02/06/2019,Sampués
+189,Hiring Partner,Partner,Medium (50-249),company_189,n/a,12/10/2018,Trang
+190,Hiring Partner,Partner,NA,company_190,Consumer Services,17/10/2017,Dul’durga
+191,Hiring Partner,Partner,Medium (50-249),company_191,Health Care,10/07/2016,Dongzhaogezhuang
+192,Hiring Partner,Partner,Micro (0-14),company_192,n/a,04/06/2017,Russeifa
+193,Hiring Partner,Partner,Micro (0-14),company_193,Capital Goods,30/01/2016,Olivia
+194,Hiring Partner,Partner,Micro (0-14),company_194,n/a,06/11/2016,Shah Alam
+195,Hiring Partner,Partner,Micro (0-14),company_195,n/a,21/12/2018,Petropavlovsk
+196,Hiring Partner,Partner,Small (15-49),company_196,Health Care,21/09/2016,Columbus
+197,Hiring Partner,Partner,Micro (0-14),company_197,Health Care,06/10/2017,Palca
+198,Hiring Partner,Partner,Micro (0-14),company_198,Transportation,02/08/2016,Granard
+199,Hiring Partner,Partner,Micro (0-14),company_199,n/a,14/01/2017,Baolong
+200,NA,Non Partner,NA,company_200,Health Care,28/05/2019,Talondang
+201,NA,Non Partner,NA,company_201,Consumer Services,01/04/2017,Chernukha
+202,NA,Non Partner,NA,company_202,Transportation,11/09/2019,George Town
+203,NA,Non Partner,NA,company_203,Basic Industries,22/09/2018,San Fernando
+204,NA,Non Partner,NA,company_204,Consumer Services,17/09/2018,Nāgarpur
+205,NA,Non Partner,Micro (0-14),company_205,Health Care,29/09/2017,Ransang
+206,NA,Non Partner,NA,company_206,Finance,25/12/2017,Mosul
+207,NA,Non Partner,NA,company_207,Consumer Services,02/08/2019,Bago
+208,NA,Non Partner,NA,company_208,Technology,15/06/2016,Fāryāb
+209,NA,Non Partner,NA,company_209,Technology,31/05/2016,Glotovka
+210,Hiring Partner,Partner,Small (15-49),company_210,Health Care,09/09/2019,Bangan-Oda
+211,NA,Non Partner,NA,company_211,n/a,15/11/2018,Lebedyn
+212,NA,Non Partner,NA,company_212,n/a,09/12/2016,Ülken
+213,NA,Non Partner,NA,company_213,Energy,12/01/2019,Meitang
+214,NA,Non Partner,NA,company_214,Finance,29/08/2019,Ogwashi-Uku
+215,NA,Non Partner,NA,company_215,Capital Goods,11/07/2016,Neftegorsk
+216,NA,Non Partner,NA,company_216,n/a,04/03/2018,Gelemso
+217,NA,Non Partner,NA,company_217,Finance,05/11/2016,Libertad
+218,NA,Non Partner,Large (250+),company_218,Capital Goods,22/07/2019,Tubod
+219,NA,Non Partner,NA,company_219,Basic Industries,22/09/2018,Pęczniew
+220,Hiring Partner,Partner,Large (250+),company_220,n/a,27/01/2018,Grande Prairie
+221,NA,Non Partner,NA,company_221,Basic Industries,13/10/2017,Niimi
+222,NA,Non Partner,NA,company_222,Health Care,15/07/2018,Progreso
+223,NA,Non Partner,NA,company_223,Finance,01/08/2017,Klayusiwalan
+224,NA,Non Partner,NA,company_224,Consumer Non-Durables,03/07/2019,’Unābah
+225,NA,Non Partner,NA,company_225,n/a,18/09/2019,Taoshan
+226,NA,Non Partner,NA,company_226,n/a,12/07/2016,Candoso
+227,NA,Non Partner,NA,company_227,Finance,18/06/2016,Jenang Selatan
+228,NA,Non Partner,NA,company_228,Finance,04/12/2016,Sigli
+229,NA,Non Partner,NA,company_229,Finance,10/05/2016,Teseney
+230,NA,Non Partner,NA,company_230,Technology,20/10/2017,Jieshipu
+231,NA,Non Partner,NA,company_231,Transportation,23/01/2019,Petushki
+232,Channel Partner / Advocate,Non Partner,NA,company_232,Finance,10/02/2017,Huaitu
+233,NA,Non Partner,NA,company_233,n/a,02/03/2016,San Juan
+234,NA,Non Partner,NA,company_234,Consumer Services,15/12/2018,Huangwei
+235,Hiring Partner,Partner,Small (15-49),company_235,Finance,04/09/2016,Varkaus
+236,NA,Non Partner,NA,company_236,Health Care,30/01/2016,São Paulo de Olivença
+237,Hiring Partner,Partner,Large (250+),company_237,Public Utilities,06/08/2019,Dushanbe
+238,NA,Non Partner,NA,company_238,n/a,15/10/2017,Sakai-nakajima
+239,NA,Non Partner,NA,company_239,Health Care,29/10/2016,Štítná nad Vláří
+240,NA,Non Partner,NA,company_240,n/a,04/06/2019,Carregal
+241,Hiring Partner,Non Partner,NA,company_241,Technology,06/04/2018,Beltinci
+242,NA,Non Partner,NA,company_242,Finance,21/01/2018,Mariestad
+243,Training Partner,Partner,Large (250+),company_243,Health Care,10/06/2017,Liverpool
+244,NA,Non Partner,NA,company_244,n/a,11/10/2016,Badāmā
+245,NA,Non Partner,NA,company_245,Finance,05/10/2017,Avon
+246,NA,Non Partner,NA,company_246,Capital Goods,15/08/2018,Xingong
+247,NA,Non Partner,NA,company_247,Consumer Services,19/03/2017,Toubao
+248,Hiring Partner,Partner,Medium (50-249),company_248,n/a,07/03/2019,Rio Claro
+249,NA,Non Partner,NA,company_249,n/a,31/08/2018,Bouna
+250,NA,Non Partner,NA,company_250,n/a,11/07/2019,Béreldange
+251,NA,Non Partner,NA,company_251,Finance,15/12/2018,Tatarsk
+252,NA,Non Partner,NA,company_252,Capital Goods,04/02/2019,Villach
+253,NA,Non Partner,NA,company_253,Capital Goods,18/12/2016,Moussoro
+254,NA,Non Partner,NA,company_254,Consumer Services,11/12/2018,Lyon
+255,Hiring Partner,Partner,Micro (0-14),company_255,Technology,14/04/2019,Paraty
+256,NA,Non Partner,NA,company_256,n/a,07/04/2018,Vista Alegre
+257,NA,Non Partner,NA,company_257,Finance,24/06/2016,Hāfizābād
+258,NA,Non Partner,NA,company_258,Energy,29/03/2016,Toride
+259,NA,Non Partner,NA,company_259,Health Care,24/07/2017,Lajkovac
+260,NA,Non Partner,NA,company_260,Transportation,09/10/2017,Bulumulyo
+261,NA,Non Partner,NA,company_261,Health Care,12/11/2018,Şānūr
+262,NA,Non Partner,NA,company_262,Consumer Non-Durables,04/10/2018,Ujae
+263,NA,Non Partner,NA,company_263,n/a,02/06/2017,Biaoshan
+264,NA,Non Partner,NA,company_264,n/a,28/07/2019,Dalongzhan
+265,NA,Non Partner,NA,company_265,Consumer Services,21/02/2016,Quinchía
+266,Hiring Partner,Partner,Large (250+),company_266,Consumer Services,12/08/2019,Douala
+267,Hiring Partner,Non Partner,Medium (50-249),company_267,n/a,18/02/2016,Pithári
+268,NA,Non Partner,NA,company_268,Consumer Services,08/05/2018,Nyíregyháza
+269,NA,Non Partner,NA,company_269,Finance,28/07/2018,Huangpo
+270,NA,Non Partner,NA,company_270,Basic Industries,21/11/2017,Hovås
+271,NA,Non Partner,NA,company_271,Energy,15/04/2016,Tanxi
+272,NA,Non Partner,NA,company_272,Technology,09/11/2016,New York City
+273,NA,Non Partner,NA,company_273,Finance,07/04/2018,Thatta
+274,NA,Non Partner,NA,company_274,Health Care,09/09/2019,Hal’shany
+275,NA,Non Partner,NA,company_275,n/a,11/10/2018,Flin Flon
+276,Hiring Partner,Partner,Small (15-49),company_276,Technology,21/08/2018,Madona
+277,NA,Non Partner,NA,company_277,Health Care,13/12/2018,Arnelas
+278,NA,Non Partner,NA,company_278,Finance,31/05/2018,Veliki Preslav
+279,Hiring Partner,Non Partner,NA,company_279,Public Utilities,22/01/2019,Adelaide Mail Centre
+280,NA,Non Partner,NA,company_280,Technology,13/03/2017,Sendang
+281,NA,Non Partner,NA,company_281,Consumer Non-Durables,27/08/2017,Umuarama
+282,Hiring Partner,Partner,Medium (50-249),company_282,Consumer Services,26/01/2017,Jianjiang
+283,NA,Non Partner,NA,company_283,n/a,19/12/2016,Gorgān
+284,NA,Non Partner,NA,company_284,Consumer Services,16/12/2016,Steinkjer
+285,NA,Non Partner,NA,company_285,Public Utilities,20/03/2018,Maddarulug Norte
+286,NA,Non Partner,NA,company_286,Finance,12/04/2018,Granica
+287,NA,Non Partner,NA,company_287,Health Care,28/09/2016,Oster
+288,NA,Non Partner,NA,company_288,n/a,01/02/2019,Göteborg
+289,NA,Non Partner,NA,company_289,Public Utilities,10/08/2018,Cruzeiro do Oeste
+290,NA,Non Partner,NA,company_290,Finance,03/06/2019,Raci Kulon
+291,NA,Non Partner,NA,company_291,Finance,14/01/2018,Šmarje pri Jelšah
+292,NA,Non Partner,NA,company_292,Finance,17/02/2018,Varpaisjärvi
+293,NA,Non Partner,NA,company_293,n/a,27/02/2016,Örebro
+294,NA,Non Partner,NA,company_294,Transportation,11/05/2017,Rodez
+295,Hiring Partner,Partner,Micro (0-14),company_295,Public Utilities,11/01/2019,Sarandi
+296,NA,Non Partner,NA,company_296,Finance,22/12/2018,Jamundí
+297,NA,Non Partner,NA,company_297,Basic Industries,29/10/2017,Beishan
+298,NA,Non Partner,NA,company_298,Energy,09/04/2016,Pukou
+299,NA,Non Partner,NA,company_299,Basic Industries,27/04/2018,Loukhi
+300,Hiring Partner,Partner,Small (15-49),company_300,n/a,23/11/2018,Ocoruro
+301,NA,Non Partner,NA,company_301,Consumer Services,30/09/2017,Bitola
+302,NA,Non Partner,NA,company_302,Finance,30/09/2017,Mora
+303,NA,Non Partner,NA,company_303,Energy,17/02/2019,Colombia
+304,NA,Non Partner,NA,company_304,n/a,23/03/2019,Kalino
+305,NA,Non Partner,NA,company_305,Basic Industries,01/10/2017,Brampton
+306,NA,Non Partner,NA,company_306,n/a,01/02/2018,Soljani
+307,NA,Non Partner,NA,company_307,Technology,04/07/2017,Marly-le-Roi
+308,NA,Non Partner,NA,company_308,Health Care,06/07/2019,Heredia
+309,NA,Non Partner,NA,company_309,Health Care,07/08/2016,Cereté
+310,NA,Non Partner,NA,company_310,Finance,23/04/2018,Shanshi
+311,NA,Non Partner,NA,company_311,Finance,14/01/2019,Caucete
+312,Hiring Partner,Partner,Large (250+),company_312,Capital Goods,09/10/2016,Baghlān
+313,NA,Non Partner,NA,company_313,Finance,01/02/2017,Inglewood
+314,NA,Non Partner,NA,company_314,n/a,12/03/2017,Drochia
+315,NA,Non Partner,NA,company_315,Technology,28/06/2017,Blantyre
+316,NA,Non Partner,NA,company_316,Consumer Services,16/10/2018,Soissons
+317,NA,Non Partner,NA,company_317,Technology,07/02/2019,Xinyuan
+318,NA,Non Partner,NA,company_318,Consumer Services,27/09/2019,Piura
+319,NA,Non Partner,NA,company_319,n/a,28/06/2018,Conceição da Barra
+320,NA,Non Partner,NA,company_320,Consumer Services,28/09/2017,Orléans
+321,NA,Non Partner,NA,company_321,n/a,10/03/2018,Salcedo
+322,Hiring Partner,Partner,Small (15-49),company_322,Consumer Services,27/06/2017,Santa María del Real
+323,Hiring Partner,Partner,Large (250+),company_323,n/a,11/06/2019,Shuibian
+324,NA,Non Partner,NA,company_324,Energy,10/03/2019,Azogues
+325,Hiring Partner,Non Partner,NA,company_325,Finance,30/04/2016,Dumlan
+326,NA,Non Partner,NA,company_326,n/a,05/06/2018,Kirove
+327,NA,Non Partner,NA,company_327,Consumer Services,11/07/2016,Apodi
+328,NA,Non Partner,NA,company_328,Consumer Services,06/03/2017,Polomolok
+329,NA,Non Partner,Micro (0-14),company_329,Health Care,04/08/2016,Töreboda
+330,NA,Non Partner,NA,company_330,n/a,03/06/2019,Tucurú
+331,NA,Non Partner,NA,company_331,Consumer Services,28/01/2016,Likiep
+332,NA,Non Partner,NA,company_332,n/a,13/02/2017,Momil
+333,NA,Non Partner,NA,company_333,Technology,22/04/2017,Laâyoune / El Aaiún
+334,NA,Non Partner,NA,company_334,n/a,25/03/2019,Quimbaya
+335,NA,Non Partner,NA,company_335,Public Utilities,06/08/2016,Banfora
+336,NA,Non Partner,NA,company_336,n/a,09/11/2017,Reguenga
+337,NA,Non Partner,NA,company_337,n/a,04/03/2019,Clearwater
+338,NA,Non Partner,NA,company_338,Finance,04/01/2018,Njivice
+339,NA,Non Partner,NA,company_339,Capital Goods,06/06/2017,Ankazondandy
+340,NA,Non Partner,NA,company_340,Finance,27/02/2016,General Alvear
+341,NA,Non Partner,NA,company_341,n/a,09/10/2016,Kalmar
+342,NA,Non Partner,NA,company_342,Health Care,14/12/2016,Chicheng
+343,Hiring Partner,Partner,Large (250+),company_343,Basic Industries,13/05/2019,Kebunan
+344,NA,Non Partner,NA,company_344,n/a,25/03/2018,Weishui
+345,NA,Non Partner,NA,company_345,n/a,19/02/2018,Na'ale
+346,NA,Non Partner,NA,company_346,Technology,29/08/2016,San Benito Abad
+347,Hiring Partner,Partner,Medium (50-249),company_347,Consumer Non-Durables,20/12/2018,Erfangping
+348,Hiring & Training,Partner,Large (250+),company_348,Technology,08/03/2018,Qiantang
+349,NA,Non Partner,NA,company_349,n/a,06/06/2019,Kučevo
+350,NA,Non Partner,NA,company_350,Transportation,25/07/2019,Manquiring
+351,NA,Non Partner,NA,company_351,Finance,14/11/2018,Stenungsund
+352,NA,Non Partner,NA,company_352,Miscellaneous,05/03/2019,Liancheng
+353,NA,Non Partner,NA,company_353,Finance,20/06/2018,Newport News
+354,NA,Non Partner,NA,company_354,Miscellaneous,20/10/2017,Platagata
+355,Hiring Partner,Partner,Small (15-49),company_355,Capital Goods,12/03/2018,Zvezdara
+356,NA,Non Partner,NA,company_356,Consumer Services,16/04/2016,San Miguel
+357,NA,Non Partner,Small (15-49),company_357,Finance,08/02/2019,Tanjungbatu
+358,NA,Non Partner,NA,company_358,Transportation,24/03/2019,Sepahua
+359,Hiring Partner,Partner,Small (15-49),company_359,Capital Goods,18/11/2018,El Banco
+360,NA,Non Partner,NA,company_360,Finance,19/08/2017,Syktyvkar
+361,NA,Non Partner,NA,company_361,Technology,02/04/2019,Buriwutung
+362,NA,Non Partner,NA,company_362,Health Care,05/03/2016,Lijiang
+363,NA,Non Partner,NA,company_363,Basic Industries,03/11/2018,Baruny
+364,NA,Non Partner,NA,company_364,Finance,21/01/2017,Cabuyaro
+365,NA,Non Partner,NA,company_365,Health Care,22/01/2017,Greater Napanee
+366,Hiring Partner,Partner,Micro (0-14),company_366,Consumer Services,28/06/2016,Guanting
+367,NA,Non Partner,NA,company_367,n/a,13/02/2018,Battambang
+368,NA,Non Partner,NA,company_368,Health Care,30/07/2019,Oslo
+369,Hiring Partner,Partner,Large (250+),company_369,Health Care,18/05/2018,Kraljevica
+370,NA,Non Partner,NA,company_370,Capital Goods,06/12/2018,Nobinobi
+371,NA,Non Partner,NA,company_371,Consumer Non-Durables,21/03/2018,Las Toscas
+372,NA,Non Partner,NA,company_372,Basic Industries,20/07/2019,Solec Nad Wisłą
+373,NA,Non Partner,NA,company_373,Finance,23/09/2017,Ampelgading
+374,NA,Non Partner,NA,company_374,n/a,31/03/2017,Kozy
+375,NA,Non Partner,NA,company_375,Technology,02/02/2018,Wurno
+376,NA,Non Partner,NA,company_376,n/a,13/06/2016,New Plymouth
+377,Channel Partner / Advocate,Non Partner,Micro (0-14),company_377,Miscellaneous,04/09/2019,San Jose
+378,NA,Non Partner,NA,company_378,Technology,24/06/2018,Pernå
+379,NA,Non Partner,NA,company_379,Health Care,15/09/2016,Perstorp
+380,NA,Non Partner,NA,company_380,n/a,15/12/2018,Dabao
+381,NA,Non Partner,NA,company_381,Health Care,31/08/2018,Soweto
+382,NA,Non Partner,NA,company_382,Consumer Services,01/06/2017,Galán
+383,NA,Non Partner,NA,company_383,Finance,16/05/2016,Brooklyn
+384,NA,Non Partner,NA,company_384,n/a,29/05/2018,Banikoara
+385,NA,Non Partner,NA,company_385,n/a,27/01/2017,Claremont
+386,NA,Non Partner,NA,company_386,n/a,15/12/2016,Mórrope
+387,NA,Non Partner,NA,company_387,Basic Industries,27/10/2017,Tsimkavichy
+388,NA,Non Partner,NA,company_388,Consumer Services,30/05/2016,Thomastown
+389,NA,Non Partner,NA,company_389,Basic Industries,22/05/2016,Feilaixia
+390,NA,Non Partner,NA,company_390,Finance,07/04/2018,Sumberagung
+391,NA,Non Partner,NA,company_391,Health Care,15/11/2018,Wete
+392,NA,Non Partner,NA,company_392,Consumer Non-Durables,17/06/2019,Oltintopkan
+393,NA,Non Partner,NA,company_393,Technology,04/05/2017,Vogan
+394,NA,Non Partner,NA,company_394,Consumer Services,27/03/2019,Valday
+395,NA,Non Partner,NA,company_395,Finance,12/01/2016,Sebeta
+396,NA,Non Partner,NA,company_396,Health Care,18/09/2017,Caijiazha
+397,NA,Non Partner,NA,company_397,Capital Goods,07/09/2019,Alcalá
+398,NA,Non Partner,NA,company_398,Consumer Services,10/08/2019,Severomorsk
+399,NA,Non Partner,NA,company_399,Consumer Services,14/03/2019,Luoshe
+400,NA,Non Partner,NA,company_400,Basic Industries,27/04/2016,Girón
+401,NA,Non Partner,NA,company_401,Finance,28/04/2016,Cibebek
+402,Hiring Partner,Partner,Micro (0-14),company_402,Finance,02/02/2019,Marcara
+403,NA,Non Partner,NA,company_403,Health Care,26/01/2018,Pag
+404,NA,Non Partner,NA,company_404,Finance,09/12/2018,Ragana
+405,NA,Non Partner,NA,company_405,Health Care,09/11/2016,Sebewe
+406,NA,Non Partner,Micro (0-14),company_406,Basic Industries,08/06/2017,Gunan
+407,NA,Non Partner,Medium (50-249),company_407,Capital Goods,07/04/2018,Karara
+408,NA,Non Partner,NA,company_408,Finance,24/05/2019,Lokokrangan
+409,NA,Non Partner,NA,company_409,n/a,28/10/2016,Mananjary
+410,Hiring Partner,Partner,Small (15-49),company_410,n/a,22/02/2016,Tiyingtali Kelod
+411,NA,Non Partner,NA,company_411,n/a,07/03/2019,Oberá
+412,NA,Non Partner,Medium (50-249),company_412,n/a,28/05/2018,Visby
+413,NA,Non Partner,NA,company_413,Finance,10/07/2016,Eskilstuna
+414,Hiring Partner,Partner,Small (15-49),company_414,Miscellaneous,18/02/2019,Dodoma
+415,NA,Non Partner,NA,company_415,n/a,15/01/2017,Kamo
+416,NA,Non Partner,NA,company_416,n/a,29/09/2018,Suzano
+417,NA,Non Partner,NA,company_417,Health Care,24/10/2017,Karangranjong
+418,NA,Non Partner,NA,company_418,n/a,14/04/2016,Ayia Napa
+419,NA,Non Partner,NA,company_419,Capital Goods,11/10/2016,Pámfylla
+420,NA,Non Partner,NA,company_420,Finance,01/08/2018,Mainang
+421,NA,Non Partner,NA,company_421,n/a,06/03/2016,Saraburi
+422,NA,Non Partner,NA,company_345,Basic Industries,01/12/2018,Qingyang
+423,Hiring Partner,Partner,Medium (50-249),company_422,n/a,09/09/2016,‘Uqayribāt
+424,Hiring Partner,Partner,Large (250+),company_423,Basic Industries,16/12/2018,Uberaba
+425,Hiring Partner,Partner,Micro (0-14),company_424,Finance,23/06/2017,Xiuyu
+426,NA,Non Partner,Micro (0-14),company_425,Consumer Non-Durables,23/02/2019,Napak
+427,Hiring Partner,Partner,Large (250+),company_426,Capital Goods,01/07/2017,Jibu Hulangtu
+428,Hiring & Training,Partner,Large (250+),company_427,Technology,20/06/2019,Rukem
+429,NA,Non Partner,Small (15-49),company_428,Technology,16/10/2016,Chilmāri
+430,NA,Non Partner,NA,company_429,Consumer Non-Durables,08/03/2017,Bilicenii Vechi
+431,NA,Non Partner,Micro (0-14),company_430,n/a,15/12/2017,Delmas
+432,Hiring Partner,Partner,Micro (0-14),company_431,Consumer Durables,06/08/2017,Masingbi
+433,Training Partner,Non Partner,NA,company_432,n/a,16/03/2018,Buket Teukuh
+434,NA,Non Partner,NA,company_433,Health Care,29/06/2017,Lagoa Santa
+435,Hiring Partner,Partner,Micro (0-14),company_434,n/a,31/07/2018,Duancun
+436,Hiring Partner,Partner,Small (15-49),company_435,Miscellaneous,12/09/2017,Kampen (Overijssel)
+437,Hiring Partner,Partner,Micro (0-14),company_436,n/a,16/10/2018,Ekibastuz
+438,Hiring Partner,Partner,Small (15-49),company_437,Energy,19/05/2016,Huangqi
+439,Hiring Partner,Non Partner,Small (15-49),company_438,n/a,27/12/2016,Orléans
+440,NA,Non Partner,Micro (0-14),company_439,Consumer Non-Durables,10/05/2019,Engel’-Yurt
+441,Hiring Partner,Non Partner,Micro (0-14),company_440,n/a,07/01/2019,Bajiao
+442,Hiring & Training,Partner,Large (250+),company_441,Finance,20/12/2018,Hedong
+443,NA,Non Partner,Small (15-49),company_442,Consumer Non-Durables,27/03/2019,Yubilyeyny
+444,NA,Non Partner,Micro (0-14),company_443,n/a,02/07/2017,Carcassonne
+445,NA,Non Partner,NA,company_444,Health Care,26/11/2016,Hovås
+446,NA,Non Partner,NA,company_445,Technology,16/10/2018,Wilcza
+447,NA,Non Partner,Large (250+),company_446,Capital Goods,11/12/2018,Wolfsberg
+448,NA,Non Partner,Large (250+),company_447,n/a,13/06/2018,Ulan Us
+449,NA,Non Partner,Large (250+),company_448,Technology,04/04/2016,Paris 13
+450,NA,Non Partner,Micro (0-14),company_449,Miscellaneous,25/02/2018,Ampanihy
+451,NA,Non Partner,NA,company_450,Finance,16/02/2019,Wenshui
+452,Hiring Partner,Partner,Small (15-49),company_451,Consumer Non-Durables,27/05/2017,Angra do Heroísmo
+453,NA,Non Partner,Large (250+),company_452,Consumer Services,04/05/2016,Great Neck
+454,Hiring Partner,Partner,Small (15-49),company_453,n/a,31/03/2017,Datong
+455,NA,Non Partner,Micro (0-14),company_454,Technology,01/08/2018,Tarvasjoki
+456,NA,Non Partner,Micro (0-14),company_455,Finance,09/05/2016,Luže
+457,NA,Non Partner,NA,company_456,Health Care,25/09/2018,San Miguel
+458,NA,Non Partner,Large (250+),company_457,Finance,20/05/2016,Pražmo
+459,NA,Non Partner,NA,company_458,n/a,01/06/2019,Suwon-si
+460,NA,Non Partner,Large (250+),company_459,Public Utilities,08/11/2018,Ikey
+461,NA,Non Partner,Large (250+),company_460,Health Care,06/03/2019,Póvoa
+462,NA,Non Partner,Large (250+),company_461,Capital Goods,13/11/2017,Tilburg
+463,NA,Non Partner,Large (250+),company_462,Technology,09/05/2018,Taipalsaari
+464,NA,Non Partner,Large (250+),company_463,Consumer Services,02/06/2019,São Raimundo Nonato
+465,NA,Non Partner,Small (15-49),company_464,n/a,24/10/2018,Vale de Figueira
+466,NA,Non Partner,Medium (50-249),company_465,Health Care,18/11/2018,Golmud
+467,NA,Non Partner,Micro (0-14),company_466,n/a,06/09/2019,Shichuan
+468,NA,Non Partner,NA,company_467,n/a,14/12/2017,Fushë-Bulqizë
+469,NA,Non Partner,Large (250+),company_468,Health Care,14/12/2017,Mladá Boleslav
+470,Hiring & Training,Partner,Large (250+),company_469,Finance,29/09/2018,Ugac Sur
+471,NA,Non Partner,NA,company_470,Capital Goods,09/10/2018,Pantenan
+472,Hiring Partner,Partner,Small (15-49),company_471,Technology,25/02/2018,Boguchar
+473,Hiring Partner,Partner,Small (15-49),company_472,Finance,06/01/2019,Gorna Oryakhovitsa
+474,NA,Non Partner,NA,company_473,n/a,23/10/2016,Donabate
+475,NA,Non Partner,NA,company_474,Consumer Durables,22/07/2016,Kozyatyn
+476,NA,Non Partner,NA,company_475,Miscellaneous,11/12/2018,Tiniguiban
+477,NA,Non Partner,NA,company_476,Technology,19/10/2018,Severoural’sk
+478,Hiring Partner,Partner,Micro (0-14),company_477,Consumer Non-Durables,11/03/2017,Samagaltay
+479,Hiring Partner,Partner,Small (15-49),company_478,n/a,26/03/2016,Margahayu
+480,Hiring Partner,Partner,Micro (0-14),company_479,Health Care,01/07/2017,Sāqayn
+481,NA,Non Partner,NA,company_480,Consumer Non-Durables,17/11/2016,Pilar
+482,NA,Non Partner,NA,company_481,Consumer Services,04/03/2018,Montargis
+483,NA,Non Partner,Micro (0-14),company_482,n/a,31/05/2019,Umeå
+484,NA,Non Partner,Small (15-49),company_483,Consumer Services,08/09/2019,Samut Songkhram
+485,NA,Non Partner,NA,company_484,n/a,09/02/2017,Alençon
+486,NA,Non Partner,Medium (50-249),company_485,Finance,02/04/2017,Fada
+487,Hiring & Training,Partner,Medium (50-249),company_486,Technology,31/03/2016,Ajaccio
+488,NA,Non Partner,Large (250+),company_487,Finance,21/08/2016,Kongjiafang
+489,Hiring Partner,Partner,Micro (0-14),company_488,Finance,05/06/2019,Kashirskoye
+490,NA,Non Partner,NA,company_489,Energy,27/02/2018,Gorgoram
+491,Hiring Partner,Partner,Micro (0-14),company_490,Capital Goods,10/08/2019,Paldit
+492,Hiring Partner,Partner,Micro (0-14),company_491,Consumer Services,28/02/2018,Garunggang
+493,NA,Non Partner,Large (250+),company_492,Technology,13/06/2017,Karibib
+494,NA,Non Partner,Micro (0-14),company_493,Health Care,28/09/2016,White Rock
+495,NA,Non Partner,Micro (0-14),company_494,n/a,01/03/2017,Gaozhou
+496,NA,Non Partner,Medium (50-249),company_495,Finance,25/07/2019,Tuanzhou
+497,Hiring Partner,Partner,Large (250+),company_496,n/a,19/02/2017,Yong’an
+498,NA,Non Partner,NA,company_497,Consumer Services,15/04/2016,Sukamenak
+499,NA,Non Partner,NA,company_498,n/a,26/02/2017,Socos
+500,NA,Non Partner,NA,company_499,Consumer Services,03/07/2019,Balogo
+501,NA,Non Partner,NA,company_500,Miscellaneous,30/04/2018,Amnat Charoen
+502,NA,Non Partner,NA,company_501,Finance,16/06/2017,Yangchengzhuang
+503,NA,Non Partner,NA,company_502,Capital Goods,03/09/2017,Ise
+504,NA,Non Partner,NA,company_503,Finance,18/03/2017,Almeria
+505,NA,Non Partner,NA,company_504,n/a,19/05/2017,Polevskoy
+506,NA,Non Partner,NA,company_505,Consumer Non-Durables,02/06/2019,Durazno
+507,NA,Non Partner,NA,company_506,Health Care,16/08/2018,Anning
+508,NA,Non Partner,NA,company_507,Health Care,14/05/2016,Gondang
+509,NA,Non Partner,NA,company_508,Finance,23/01/2016,Nonoichi
+510,NA,Non Partner,NA,company_509,n/a,28/01/2018,Lauro de Freitas
+511,NA,Non Partner,NA,company_510,Public Utilities,25/05/2017,Galis Dua
+512,NA,Non Partner,NA,company_511,n/a,04/07/2018,Seattle
+513,NA,Non Partner,NA,company_512,n/a,23/08/2017,Sumberbakti
+514,NA,Non Partner,NA,company_513,Health Care,25/06/2019,Matamey
+515,NA,Non Partner,NA,company_514,n/a,17/02/2019,Izumo
+516,NA,Non Partner,NA,company_515,n/a,18/05/2017,Krajan Keboromo
+517,NA,Non Partner,Micro (0-14),company_516,Consumer Services,02/03/2016,Maranura
+518,NA,Non Partner,NA,company_517,n/a,11/06/2017,Itaperuçu
+519,NA,Non Partner,NA,company_518,Health Care,02/08/2016,Kampong Chhnang
+520,NA,Non Partner,NA,company_519,Transportation,23/08/2018,Skoura
+521,NA,Non Partner,Micro (0-14),company_520,Health Care,08/07/2017,Banarankrajan
+522,NA,Non Partner,NA,company_521,Energy,05/04/2017,'Ali Sabieh
+523,Influencer,Non Partner,NA,company_522,Consumer Services,16/04/2017,Rancapare
+524,NA,Non Partner,NA,company_523,n/a,28/09/2018,Mangulile
+525,NA,Non Partner,NA,company_524,n/a,12/08/2019,Tokombere
+526,NA,Non Partner,NA,company_525,n/a,28/06/2016,Todorovo
+527,NA,Non Partner,NA,company_526,n/a,14/01/2017,Casal Novo
+528,NA,Non Partner,NA,company_527,n/a,30/07/2017,Santo Niño
+529,NA,Non Partner,NA,company_528,Finance,10/03/2019,Ansan-si
+530,NA,Non Partner,NA,company_529,Basic Industries,16/03/2017,Yekimovichi
+531,NA,Non Partner,NA,company_530,n/a,01/07/2017,San Luis
+532,NA,Non Partner,NA,company_531,Technology,05/09/2019,Miami
+533,NA,Non Partner,NA,company_532,n/a,16/08/2016,Annotto Bay
+534,NA,Non Partner,NA,company_533,Technology,11/11/2016,Nichinan
+535,NA,Non Partner,NA,company_534,Health Care,26/04/2018,Napenay
+536,NA,Non Partner,NA,company_535,n/a,23/08/2017,Westport
+537,NA,Non Partner,NA,company_536,n/a,11/04/2017,Ráquira
+538,NA,Non Partner,NA,company_537,n/a,27/08/2018,Calvinia
+539,NA,Non Partner,NA,company_538,Health Care,22/05/2019,Krajan Pakel
+540,NA,Non Partner,NA,company_539,n/a,17/09/2017,San Nicolas
+541,NA,Non Partner,NA,company_540,n/a,11/01/2019,Paris 08
+542,NA,Non Partner,NA,company_541,n/a,21/07/2019,Černošín
+543,NA,Non Partner,NA,company_542,Health Care,20/02/2019,Qidi
+544,NA,Non Partner,NA,company_543,Finance,18/06/2016,Gempolan Wetan
+545,NA,Non Partner,NA,company_544,Consumer Services,10/03/2017,Bella Vista
+546,NA,Non Partner,NA,company_545,Capital Goods,21/09/2016,Cabreúva
+547,NA,Non Partner,NA,company_546,Consumer Durables,19/11/2016,Marmashen
+548,NA,Non Partner,NA,company_547,Basic Industries,04/03/2019,Levoberezhnaya
+549,NA,Non Partner,NA,company_548,Consumer Services,14/03/2018,Shijiazhuang
+550,NA,Non Partner,NA,company_549,Technology,02/08/2016,Daming
+551,NA,Non Partner,NA,company_550,Consumer Services,28/08/2019,Gualaceo
+552,NA,Non Partner,NA,company_551,Miscellaneous,13/02/2019,Huangqi
+553,NA,Non Partner,NA,company_552,Technology,08/05/2016,Mętków
+554,NA,Non Partner,NA,company_553,Basic Industries,20/07/2018,Hongsung
+555,NA,Non Partner,NA,company_554,Transportation,07/09/2019,Karis
+556,NA,Non Partner,NA,company_555,Technology,06/06/2019,Belém
+557,NA,Non Partner,NA,company_556,Consumer Services,13/03/2016,Cruz Alta
+558,NA,Non Partner,NA,company_557,Finance,29/11/2016,Kluki
+559,NA,Non Partner,NA,company_558,Miscellaneous,11/03/2018,Aqaba
+560,NA,Non Partner,NA,company_559,Consumer Non-Durables,28/03/2016,Chikan
+561,Hiring Partner,Partner,Micro (0-14),company_560,Basic Industries,12/04/2019,Bulusari
+562,NA,Non Partner,Large (250+),company_561,Consumer Non-Durables,24/07/2016,Trompsburg
+563,Hiring Partner,Partner,Medium (50-249),company_562,Public Utilities,12/11/2018,Nanshe
+564,NA,Non Partner,Large (250+),company_563,Consumer Services,03/10/2017,Telpaneca
+565,NA,Non Partner,Large (250+),company_564,Finance,11/12/2018,Los Cerrillos
+566,Hiring Partner,Partner,Small (15-49),company_565,n/a,13/05/2016,Kagal’nitskaya
+567,NA,Non Partner,Large (250+),company_566,Energy,23/09/2018,Zhigalovo
+568,Hiring Partner,Partner,Small (15-49),company_567,Consumer Non-Durables,04/08/2017,Guamal
+569,Hiring Partner,Partner,Small (15-49),company_568,Finance,31/12/2017,Sadar
+570,Hiring Partner,Partner,Small (15-49),company_569,Technology,16/11/2017,Klishkivtsi
+571,NA,Non Partner,NA,company_570,n/a,20/12/2016,Dalududalu
+572,NA,Non Partner,Large (250+),company_571,Finance,07/02/2016,Matiao
+573,Hiring Partner,Partner,Small (15-49),company_572,Energy,19/12/2018,Sawoi
+574,NA,Non Partner,NA,company_573,Consumer Durables,14/08/2016,Shangyuan
+575,NA,Non Partner,Medium (50-249),company_574,Finance,19/05/2018,Banjar Gunungpande
+576,NA,Non Partner,Large (250+),company_575,n/a,09/10/2017,Gœsdorf
+577,NA,Non Partner,NA,company_576,n/a,24/06/2018,Ongi
+578,Hiring Partner,Partner,Micro (0-14),company_577,Consumer Durables,22/12/2017,Dengmu
+579,NA,Non Partner,Large (250+),company_578,Finance,28/10/2016,Pingdingshan
+580,Hiring Partner,Partner,Large (250+),company_579,Consumer Services,07/01/2018,Nueva Manoa
+581,NA,Non Partner,NA,company_580,n/a,24/06/2017,Hołoby
+582,NA,Non Partner,NA,company_581,n/a,16/04/2018,Prostřední Bečva
+583,NA,Non Partner,NA,company_582,Consumer Services,13/01/2017,Gazojak
+584,NA,Non Partner,NA,company_583,Health Care,16/06/2019,Putinci
+585,NA,Non Partner,Micro (0-14),company_584,Finance,04/06/2016,Lachute
+586,NA,Non Partner,NA,company_585,n/a,08/06/2016,Ennery
+587,NA,Non Partner,Small (15-49),company_586,n/a,25/03/2019,Bandung
+588,NA,Non Partner,Small (15-49),company_587,Capital Goods,04/04/2019,Taha Man Zu
+589,NA,Non Partner,Medium (50-249),company_588,n/a,25/01/2019,Banjar Ambengan
+590,Channel Partner / Advocate,Partner,NA,company_589,Consumer Services,11/08/2017,Cloyne
+591,NA,Non Partner,NA,company_590,Transportation,26/12/2017,Tonota
+592,NA,Non Partner,NA,company_193,Health Care,01/05/2017,Mazongshan
+593,Client Experience,Partner,Micro (0-14),company_591,Capital Goods,21/12/2018,Shinpokh
+594,NA,Non Partner,Large (250+),company_592,Consumer Non-Durables,24/04/2019,Byera Village
+595,NA,Non Partner,NA,company_593,Capital Goods,07/07/2019,Beppu
+596,NA,Non Partner,NA,company_594,Health Care,07/07/2016,Guantian
+597,NA,Non Partner,NA,company_595,Capital Goods,03/03/2019,Sines
+598,Hiring & Training,Non Partner,Small (15-49),company_596,n/a,27/09/2017,Jianghong
+599,NA,Non Partner,NA,company_597,Consumer Non-Durables,16/07/2019,Praingkareha
+600,NA,Non Partner,NA,company_598,n/a,29/01/2017,Bojong
+601,NA,Non Partner,NA,company_599,Health Care,07/02/2017,Amargosa
+602,NA,Non Partner,NA,company_600,n/a,18/09/2016,Ibitinga
+603,NA,Non Partner,NA,company_601,Technology,19/07/2017,Sikur
+604,NA,Non Partner,NA,company_602,Consumer Services,20/04/2017,Rio Real
+605,NA,Non Partner,NA,company_603,Technology,25/03/2019,Phù Mỹ
+606,NA,Non Partner,NA,company_604,Health Care,10/07/2019,Huillapima
+607,NA,Non Partner,NA,company_605,Finance,11/12/2017,Béja
+608,NA,Non Partner,NA,company_606,n/a,12/11/2016,Des Moines
+609,NA,Non Partner,NA,company_607,Capital Goods,27/09/2016,Ihosy
+610,NA,Non Partner,NA,company_608,Consumer Non-Durables,03/01/2016,Simpang
+611,NA,Non Partner,NA,company_609,Public Utilities,01/07/2017,Yihe
+612,NA,Non Partner,NA,company_610,n/a,08/05/2019,Gurra e Vogël
+613,NA,Non Partner,NA,company_611,Health Care,03/04/2018,Utsjoki
+614,NA,Non Partner,Micro (0-14),company_612,n/a,08/06/2017,Shishi
+615,NA,Non Partner,NA,company_613,n/a,04/06/2016,Sliema
+616,NA,Non Partner,NA,company_614,Public Utilities,24/03/2016,Yongxing Chengguanzhen
+617,NA,Non Partner,NA,company_615,Health Care,19/07/2016,Alilem
+618,NA,Non Partner,NA,company_616,Finance,08/06/2017,Axili
+619,NA,Non Partner,NA,company_617,n/a,12/04/2018,Itapecuru Mirim
+620,NA,Non Partner,NA,company_618,Health Care,13/08/2019,Petani
+621,NA,Non Partner,NA,company_619,Health Care,09/06/2017,Betafo
+622,NA,Non Partner,NA,company_620,Basic Industries,10/02/2017,Houjiagang
+623,NA,Non Partner,NA,company_621,Finance,28/06/2017,Kansas City
+624,NA,Non Partner,NA,company_622,Transportation,30/07/2016,Kampungladang
+625,NA,Non Partner,Micro (0-14),company_623,n/a,12/08/2019,Heshi
+626,Channel Partner / Advocate,Partner,NA,company_624,Technology,26/11/2017,Trảng Bom
+627,Channel Partner / Advocate,Partner,NA,company_625,Finance,25/12/2018,Arāk
+628,Channel Partner / Advocate,Partner,NA,company_626,Consumer Services,31/05/2018,Kushovë
+629,Hiring Partner,Partner,Large (250+),company_627,Technology,16/09/2018,Yanwan
+630,NA,Non Partner,Micro (0-14),company_628,Finance,13/03/2019,Laojun
+631,Hiring Partner,Partner,Medium (50-249),company_629,Finance,01/01/2018,Talas
+632,NA,Non Partner,NA,company_630,Basic Industries,02/09/2016,Ribeiro
+633,NA,Non Partner,NA,company_631,n/a,04/06/2016,Sydney
+634,Hiring Partner,Non Partner,NA,company_632,Technology,11/06/2018,Novi Slankamen
+635,Hiring Partner,Partner,Micro (0-14),company_633,n/a,16/05/2016,Lazaro Cardenas
+636,NA,Non Partner,Large (250+),company_634,n/a,11/04/2017,Paobokol
+637,NA,Non Partner,Large (250+),company_635,n/a,17/05/2017,Sanguansi
+638,NA,Non Partner,NA,company_636,Basic Industries,05/11/2018,Kashira
+639,NA,Non Partner,Large (250+),company_637,Finance,26/12/2016,Khŭjand
+640,NA,Non Partner,NA,company_638,n/a,30/01/2019,Kongkeshu
+641,Hiring Partner,Partner,Micro (0-14),company_639,Consumer Services,25/10/2017,Jiantianjie
+642,NA,Non Partner,Micro (0-14),company_640,Consumer Services,02/08/2016,Bumirejo
+643,Training Partner,Partner,Large (250+),company_641,Health Care,23/09/2016,Soufrière
+644,NA,Non Partner,Small (15-49),company_642,Energy,08/12/2017,Casablanca
+645,NA,Non Partner,Large (250+),company_643,Health Care,16/01/2017,Condega
+646,NA,Non Partner,Large (250+),company_644,Consumer Services,04/07/2016,Tarakaniv
+647,NA,Non Partner,Large (250+),company_645,Finance,23/12/2017,Vila Maior
+648,NA,Non Partner,NA,company_646,n/a,04/03/2017,Yunlong
+649,Hiring Partner,Partner,Large (250+),company_647,Basic Industries,17/07/2019,Malanay
+650,NA,Non Partner,Micro (0-14),company_648,n/a,01/04/2019,Narimanov
+651,NA,Non Partner,NA,company_649,Consumer Durables,10/10/2018,Qinghe
+652,NA,Non Partner,Large (250+),company_650,Consumer Durables,20/04/2018,Kazimierz Dolny
+653,NA,Non Partner,NA,company_651,n/a,21/04/2019,Round Rock
+654,NA,Non Partner,Large (250+),company_652,Transportation,03/09/2017,Sātkania
+655,NA,Non Partner,NA,company_653,Basic Industries,29/09/2016,Sufālat Samā’il
+656,NA,Non Partner,Large (250+),company_654,Technology,13/09/2016,Duishan
+657,NA,Non Partner,Large (250+),company_655,Miscellaneous,10/05/2017,Jorochito
+658,NA,Non Partner,Medium (50-249),company_656,Energy,17/11/2017,General Villegas
+659,Hiring Partner,Partner,Medium (50-249),company_657,n/a,25/06/2017,Bima
+660,NA,Non Partner,Medium (50-249),company_658,n/a,28/08/2018,Austin
+661,NA,Non Partner,Micro (0-14),company_659,Finance,02/05/2017,Devitsa
+662,NA,Non Partner,Micro (0-14),company_660,Technology,27/09/2016,Çalxanqala
+663,NA,Non Partner,Large (250+),company_661,n/a,22/11/2018,Rebe
+664,NA,Non Partner,NA,company_662,Finance,15/03/2017,Racławice
+665,NA,Non Partner,Micro (0-14),company_663,Consumer Services,04/02/2019,Mariinsk
+666,NA,Non Partner,Large (250+),company_664,Finance,24/03/2017,Velikiye Luki
+667,NA,Non Partner,Micro (0-14),company_665,Consumer Non-Durables,05/02/2016,Horad Barysaw
+668,NA,Non Partner,Large (250+),company_666,Technology,24/04/2017,Šenčur
+669,NA,Non Partner,Large (250+),company_667,n/a,04/06/2019,Pasaje
+670,NA,Non Partner,Large (250+),company_668,Finance,30/08/2017,Nagano-shi
+671,Hiring Partner,Partner,Small (15-49),company_669,Health Care,23/11/2017,Sobreira
+672,Hiring Partner,Partner,Micro (0-14),company_670,Transportation,22/10/2017,Kan
+673,Hiring Partner,Partner,Small (15-49),company_671,Finance,28/01/2016,Villa Nueva
+674,NA,Non Partner,Large (250+),company_672,Health Care,22/04/2019,Embi
+675,NA,Non Partner,Micro (0-14),company_673,Capital Goods,12/05/2016,San Joaquin
+676,NA,Non Partner,Micro (0-14),company_674,Consumer Non-Durables,31/01/2017,Santa Nino
+677,NA,Non Partner,Micro (0-14),company_675,Consumer Services,03/05/2017,Żarki
+678,NA,Non Partner,Small (15-49),company_676,n/a,15/06/2018,Örnsköldsvik
+679,NA,Non Partner,Large (250+),company_677,Technology,01/12/2018,Ringinagung
+680,NA,Non Partner,Small (15-49),company_678,Consumer Non-Durables,19/09/2019,Renhe
+681,NA,Non Partner,Medium (50-249),company_679,Public Utilities,16/06/2017,Chucatamani
+682,NA,Non Partner,Small (15-49),company_680,n/a,20/12/2017,Natitingou
+683,Hiring Partner,Partner,Micro (0-14),company_681,n/a,16/09/2019,Nor Gyugh
+684,Hiring Partner,Partner,Micro (0-14),company_682,Health Care,23/07/2016,Seidu
+685,NA,Non Partner,Medium (50-249),company_683,n/a,10/08/2019,Kalawit
+686,NA,Non Partner,Large (250+),company_684,Public Utilities,05/07/2017,Tumbi
+687,NA,Non Partner,Micro (0-14),company_685,Capital Goods,04/04/2018,Yinglan
+688,Hiring Partner,Partner,Small (15-49),company_686,n/a,31/10/2016,Yesan
+689,NA,Non Partner,NA,company_687,Finance,19/11/2018,Tukhlya
+690,NA,Non Partner,Small (15-49),company_688,n/a,28/12/2018,Wan’an
+691,Hiring Partner,Partner,Micro (0-14),company_689,n/a,16/03/2016,Casselman
+692,Hiring Partner,Partner,Small (15-49),company_690,Capital Goods,07/12/2018,Sulyukta
+693,NA,Non Partner,Small (15-49),company_691,Finance,07/01/2018,Klumpit
+694,NA,Non Partner,Large (250+),company_692,Finance,26/01/2018,Nanortalik
+695,NA,Non Partner,Small (15-49),company_693,Consumer Services,11/06/2019,Warungbanten
+696,NA,Non Partner,Micro (0-14),company_694,Consumer Durables,31/01/2017,Santo Domingo
+697,NA,Non Partner,Micro (0-14),company_695,Consumer Services,17/04/2016,Síkinos
+698,NA,Non Partner,Small (15-49),company_696,Finance,20/03/2016,Linköping
+699,NA,Non Partner,Micro (0-14),company_697,Consumer Services,28/07/2016,Gœsdorf
+700,NA,Non Partner,Large (250+),company_698,Energy,27/02/2018,Itapuí
+701,NA,Non Partner,Small (15-49),company_699,Finance,25/11/2016,Laocheng
+702,NA,Non Partner,Large (250+),company_700,Public Utilities,12/07/2017,Gjegjan
+703,Hiring Partner,Partner,Micro (0-14),company_701,Energy,28/03/2019,Aco
+704,NA,Non Partner,Small (15-49),company_702,n/a,06/12/2016,Camino Real
+705,NA,Non Partner,Large (250+),company_703,Technology,24/06/2017,Kendalrejo
+706,NA,Non Partner,Small (15-49),company_704,Consumer Services,11/05/2016,Khoyniki
+707,NA,Non Partner,Micro (0-14),company_705,Consumer Services,09/05/2017,كاف الجاع
+708,NA,Non Partner,Large (250+),company_706,n/a,30/12/2016,Kafr Sawm
+709,NA,Non Partner,Micro (0-14),company_707,n/a,19/04/2019,Maloma
+710,Hiring Partner,Partner,Micro (0-14),company_708,Basic Industries,05/12/2016,Bol
+711,Hiring Partner,Partner,Large (250+),company_709,Capital Goods,28/11/2017,Miskindzha
+712,NA,Non Partner,Micro (0-14),company_710,n/a,06/05/2016,Nerchinsk
+713,Hiring Partner,Partner,Micro (0-14),company_711,Technology,27/06/2017,Dasha
+714,NA,Non Partner,Small (15-49),company_712,Finance,14/03/2016,Ettelbruck
+715,NA,Non Partner,Small (15-49),company_713,Public Utilities,01/04/2019,Sudimoro
+716,NA,Non Partner,NA,company_714,Consumer Services,31/03/2019,Kostryzhivka
+717,NA,Non Partner,Small (15-49),company_715,Basic Industries,02/04/2016,Krasnorechenskiy
+718,NA,Non Partner,Micro (0-14),company_716,Basic Industries,05/06/2017,Birnin Kebbi
+719,NA,Non Partner,Small (15-49),company_717,n/a,12/04/2019,Albert Town
+720,NA,Non Partner,Large (250+),company_718,n/a,02/10/2018,Chambellan
+721,Channel Partner / Advocate,Non Partner,Micro (0-14),company_719,Energy,20/02/2019,Guxi
+722,NA,Non Partner,Large (250+),company_720,Finance,24/04/2019,Nykarleby
+723,NA,Non Partner,NA,company_721,n/a,09/03/2016,Неготино
+724,Hiring Partner,Partner,Small (15-49),company_722,n/a,27/06/2017,Bayramaly
+725,NA,Non Partner,Small (15-49),company_723,Basic Industries,29/06/2017,Srokowo
+726,NA,Non Partner,Small (15-49),company_724,n/a,13/02/2019,Montalegre
+727,NA,Non Partner,Small (15-49),company_725,Finance,19/03/2019,Ponyri Vtoryye
+728,Hiring Partner,Partner,Micro (0-14),company_726,Technology,29/04/2017,Colcabamba
+729,NA,Non Partner,Micro (0-14),company_727,Capital Goods,26/09/2019,Nokaneng
+730,Influencer,Non Partner,Micro (0-14),company_728,Health Care,31/12/2016,Megion
+731,NA,Non Partner,Large (250+),company_729,Consumer Services,17/11/2016,Andou
+732,Hiring Partner,Non Partner,Micro (0-14),company_730,Health Care,02/07/2019,Malandag
+733,NA,Non Partner,NA,company_731,n/a,14/02/2016,Loket
+734,NA,Non Partner,NA,company_732,n/a,19/08/2017,Gresik
+735,NA,Non Partner,NA,company_733,n/a,02/01/2017,Kedungtuban
+736,NA,Non Partner,NA,company_734,Consumer Non-Durables,11/09/2017,Sukamulya
+737,NA,Non Partner,Micro (0-14),company_735,Health Care,09/05/2019,Strum
+738,NA,Non Partner,NA,company_736,Finance,29/06/2016,Cortiçóis
+739,Hiring Partner,Partner,Small (15-49),company_737,Capital Goods,03/06/2017,União
+740,NA,Non Partner,NA,company_695,Consumer Services,10/04/2018,Trinidad
+741,NA,Non Partner,NA,company_738,n/a,13/07/2017,L'Île-Perrot
+742,NA,Non Partner,NA,company_739,Public Utilities,01/11/2018,Nyinqug
+743,Hiring Partner,Partner,Large (250+),company_740,Capital Goods,04/05/2019,Gondang
+744,NA,Non Partner,NA,company_741,Basic Industries,04/07/2017,Huangsha
+745,NA,Non Partner,NA,company_742,Health Care,27/04/2019,Ujsoły
+746,Hiring Partner,Partner,Micro (0-14),company_743,n/a,01/07/2017,Rzhev
+747,Channel Partner / Advocate,Partner,NA,company_744,Energy,01/03/2018,Maojiagang
+748,Influencer,Non Partner,NA,company_745,Finance,26/12/2017,Artemisa
+749,Channel Partner / Advocate,Non Partner,NA,company_746,Capital Goods,01/07/2017,Qādirpur Rān
+750,NA,Non Partner,NA,company_747,Basic Industries,10/07/2019,Lākshām
+751,NA,Non Partner,NA,company_748,Consumer Services,29/04/2018,Jiangqiao
+752,NA,Non Partner,NA,company_749,Health Care,08/12/2018,Hudson Bay
+753,Hiring Partner,Non Partner,NA,company_750,Capital Goods,16/09/2017,Umanggudang
+754,NA,Non Partner,NA,company_751,Transportation,08/10/2016,Kuchinarai
+755,Hiring Partner,Partner,Large (250+),company_752,Technology,05/04/2018,Raša
+756,NA,Non Partner,NA,company_753,Consumer Non-Durables,01/04/2017,Cihua
+757,NA,Non Partner,NA,company_754,n/a,15/04/2016,Paatan
+758,NA,Non Partner,NA,company_755,Basic Industries,09/09/2018,Lyon
+759,Channel Partner / Advocate,Partner,NA,company_756,Health Care,31/12/2018,Chengbei
+760,Channel Partner / Advocate,Partner,NA,company_757,Technology,02/12/2017,Cruz
+761,Channel Partner / Advocate,Non Partner,NA,company_758,Public Utilities,25/05/2017,Karlskoga
+762,NA,Non Partner,NA,company_759,Technology,17/10/2016,Sumberpandan
+763,Client Experience,Partner,NA,company_760,Health Care,02/11/2016,San Juan Opico
+764,Channel Partner / Advocate,Partner,NA,company_761,Consumer Services,08/07/2019,Lesnoy
+765,NA,Non Partner,NA,company_762,Technology,26/04/2016,Prinza
+766,NA,Non Partner,NA,company_763,Health Care,30/07/2019,Reinaldes
+767,Client Experience,Partner,NA,company_764,Technology,14/06/2016,Xuhang
+768,NA,Non Partner,Micro (0-14),company_765,Miscellaneous,09/05/2019,Bom Despacho
+769,NA,Non Partner,Micro (0-14),company_766,Finance,20/09/2019,Františkovy Lázně
+770,Hiring Partner,Non Partner,NA,company_767,Finance,08/12/2017,Mérignac
+771,Hiring Partner,Non Partner,NA,company_247,Health Care,06/12/2016,Nakajah
+772,Channel Partner / Advocate,Non Partner,NA,company_768,Basic Industries,08/06/2016,Akoupé
+773,NA,Non Partner,NA,company_769,Health Care,17/07/2017,Oroin Xibe
+774,NA,Non Partner,NA,company_770,Finance,14/02/2016,Sekarjalak
+775,NA,Non Partner,NA,company_771,Capital Goods,01/02/2019,Mariana
+776,Hiring Partner,Partner,Micro (0-14),company_772,Public Utilities,12/04/2019,Sevan
+777,NA,Non Partner,NA,company_773,Finance,15/02/2019,Nila Dua
+778,NA,Non Partner,NA,company_774,n/a,20/08/2019,Tomioka
+779,NA,Non Partner,NA,company_775,Consumer Services,23/01/2019,Itoigawa
+780,Hiring Partner,Non Partner,Small (15-49),company_776,Public Utilities,16/01/2019,Kyrenia
+781,Hiring Partner,Non Partner,Small (15-49),company_777,n/a,03/05/2016,Chichibu
+782,Hiring Partner,Non Partner,Micro (0-14),company_778,Health Care,18/11/2018,Zhangxiang
+783,Hiring Partner,Partner,Micro (0-14),company_779,Health Care,01/06/2018,Hadžići
+784,NA,Non Partner,NA,company_780,Energy,26/01/2018,São João dos Montes
+785,Hiring Partner,Non Partner,Micro (0-14),company_781,n/a,03/10/2016,Gōdo
+786,Client Experience,Partner,Micro (0-14),company_782,Consumer Services,29/10/2017,Feng’an
+787,Hiring & Training,Non Partner,NA,company_783,n/a,07/11/2018,Avignon
+788,Hiring Partner,Non Partner,Micro (0-14),company_784,Consumer Services,20/07/2019,Caofang
+789,NA,Non Partner,Micro (0-14),company_785,Transportation,17/11/2018,Lazaro Cardenas
+790,Hiring Partner,Non Partner,Micro (0-14),company_786,Public Utilities,22/03/2017,Centre de Flacq
+791,Hiring Partner,Non Partner,Micro (0-14),company_787,Technology,07/07/2016,Kebonagung
+792,NA,Non Partner,NA,company_788,n/a,28/06/2016,Goris
+793,Hiring Partner,Non Partner,Micro (0-14),company_789,Health Care,18/03/2016,Dostoyevka
+794,Hiring Partner,Non Partner,NA,company_790,n/a,12/08/2018,Šentrupert
+795,NA,Non Partner,Micro (0-14),company_791,Finance,07/02/2017,Чучер - Сандево
+796,Hiring Partner,Non Partner,NA,company_792,Finance,05/04/2017,Capitán Solari
+797,Hiring Partner,Non Partner,NA,company_793,Energy,22/04/2018,Monastir
+798,Hiring Partner,Non Partner,NA,company_794,n/a,18/01/2017,Puerto Nariño
+799,Channel Partner / Advocate,Non Partner,Small (15-49),company_795,Consumer Durables,05/07/2017,São Paio de Seide
+800,Channel Partner / Advocate,Non Partner,Small (15-49),company_796,Consumer Services,28/10/2018,Vuka
+801,Channel Partner / Advocate,Non Partner,Small (15-49),company_797,n/a,12/03/2016,Arras
+802,Channel Partner / Advocate,Non Partner,Small (15-49),company_798,Capital Goods,09/10/2018,Watuagung
+803,NA,Non Partner,Small (15-49),company_799,Miscellaneous,13/09/2016,Batticaloa
+804,Channel Partner / Advocate,Non Partner,Micro (0-14),company_800,Technology,08/12/2017,Yartsevo
+805,Channel Partner / Advocate,Non Partner,Micro (0-14),company_801,Finance,14/05/2019,Bar-le-Duc
+806,Channel Partner / Advocate,Non Partner,Micro (0-14),company_802,Health Care,03/07/2019,Rostov-na-Donu
+807,Client Experience,Non Partner,Small (15-49),company_803,Energy,09/02/2016,Young America
+808,Channel Partner / Advocate,Non Partner,Small (15-49),company_804,Finance,08/11/2016,Bremen
+809,NA,Non Partner,NA,company_805,Energy,23/04/2018,Dusit
+810,Hiring Partner,Partner,Micro (0-14),company_806,Energy,29/08/2017,Wādī as Sīr
+811,Hiring Partner,Partner,Large (250+),company_807,n/a,08/10/2017,Crasto
+812,Hiring & Training,Non Partner,NA,company_808,n/a,05/06/2019,Hongqi
+813,Hiring Partner,Non Partner,NA,company_809,Consumer Services,24/06/2017,Horní Štěpánov
+814,Hiring Partner,Non Partner,NA,company_810,Health Care,15/06/2017,Rolândia
+815,NA,Non Partner,NA,company_811,Technology,11/01/2019,Sevilla
+816,NA,Non Partner,NA,company_812,Technology,23/08/2019,Swedru
+817,NA,Non Partner,NA,company_813,Public Utilities,15/01/2018,Kroya
+818,Hiring Partner,Partner,NA,company_814,Public Utilities,14/07/2018,Montalvo
+819,NA,Non Partner,NA,company_815,Public Utilities,30/10/2017,Ostaszewo
+820,NA,Non Partner,NA,company_816,n/a,16/09/2016,Fort-de-France
+821,NA,Non Partner,NA,company_817,n/a,21/08/2016,Narukan
+822,NA,Non Partner,NA,company_818,Finance,07/12/2018,Bandar ‘Abbās
+823,NA,Non Partner,NA,company_819,Consumer Services,11/06/2016,Podgórzyn
+824,NA,Non Partner,NA,company_820,Technology,28/09/2017,Senduro
+825,NA,Non Partner,NA,company_821,Consumer Services,07/06/2018,Tonoshō
+826,NA,Non Partner,NA,company_822,Capital Goods,19/04/2017,Ninghai
+827,NA,Non Partner,NA,company_823,Public Utilities,15/01/2017,Yeşilköy
+828,NA,Non Partner,NA,company_824,Finance,18/08/2018,Xinli
+829,NA,Non Partner,NA,company_825,Basic Industries,11/05/2016,Tafeng
+830,NA,Non Partner,NA,company_826,Health Care,06/12/2017,Xiaochi
+831,NA,Non Partner,NA,company_827,Finance,25/10/2018,Nong Chik
+832,NA,Non Partner,NA,company_828,n/a,19/07/2016,Koncang
+833,NA,Non Partner,NA,company_829,Consumer Non-Durables,31/12/2018,Baicheng
+834,NA,Non Partner,NA,company_830,Capital Goods,11/04/2018,Triwil
+835,Training Partner,Non Partner,NA,company_831,Consumer Services,03/03/2018,Altuf’yevskiy
+836,Hiring Partner,Partner,Small (15-49),company_832,Energy,25/10/2017,Bagjasari
+837,Hiring Partner,Partner,NA,company_833,Basic Industries,09/07/2018,Fatubia
+838,Hiring Partner,Partner,Micro (0-14),company_834,n/a,10/11/2016,Renshan
+839,Hiring Partner,Partner,Micro (0-14),company_835,Finance,15/07/2018,Sihe
+840,Hiring Partner,Partner,Micro (0-14),company_836,n/a,01/07/2019,Tomado
+841,NA,Non Partner,Large (250+),company_837,Finance,19/08/2019,Mandiana
+842,Hiring Partner,Non Partner,NA,company_838,Health Care,09/06/2017,Aguas Verdes
+843,Training Partner,Non Partner,NA,company_839,Finance,23/06/2019,Sambopinggir
+844,Training Partner,Non Partner,Micro (0-14),company_840,Finance,18/07/2017,Cholpon-Ata
+845,Hiring Partner,Non Partner,NA,company_841,Health Care,16/09/2018,Río Segundo
+846,Hiring Partner,Non Partner,Medium (50-249),company_842,Consumer Durables,04/02/2016,Guiglo
+847,Hiring Partner,Non Partner,Large (250+),company_843,Consumer Non-Durables,16/08/2019,Tajao
+848,Hiring Partner,Non Partner,Large (250+),company_844,Finance,08/05/2016,Nova Venécia
+849,Hiring Partner,NA,Large (250+),company_845,Finance,12/04/2018,Baraguá
+850,Hiring Partner,Non Partner,Micro (0-14),company_846,n/a,21/03/2019,Naples
+851,Hiring Partner,Non Partner,Small (15-49),company_847,Health Care,22/01/2018,Chigorodó
+852,Client Experience,Non Partner,Micro (0-14),company_848,Technology,04/01/2018,Mýrina
+853,Hiring Partner,Non Partner,Micro (0-14),company_849,Finance,19/02/2017,Tangzhuang
+854,Hiring Partner,NA,Small (15-49),company_850,Consumer Services,05/07/2018,Wanquan
+855,NA,Non Partner,NA,company_851,Basic Industries,30/04/2019,Juradó
+856,Hiring Partner,Non Partner,Small (15-49),company_852,Public Utilities,29/12/2018,Grand Bank
+857,NA,Non Partner,NA,company_853,Finance,03/11/2018,El Refugio
+858,NA,NA,NA,NA,Consumer Non-Durables,12/01/2018,Xihu
+859,NA,NA,NA,company_854,n/a,07/08/2019,San Martín
+860,NA,NA,NA,company_855,Health Care,11/10/2016,Jiangkou

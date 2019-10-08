@@ -1,0 +1,6 @@
+"0","```r
+third_nine_variables <- 
+third_nine_variables %>%
+  mutate(longitude = as.numeric(longitude)) %>%
+  mutate(latitude = as.numeric(latitude))
+```"

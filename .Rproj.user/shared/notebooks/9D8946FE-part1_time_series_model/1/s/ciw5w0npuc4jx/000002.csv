@@ -1,0 +1,4 @@
+"0","#Plot apps over three years"
+"0","ggplot(three_year_app_values) +"
+"0","  aes(x = date, y = goal9Completions) +"
+"0","  geom_line()"

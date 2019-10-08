@@ -1,0 +1,5 @@
+"0","#Join datasets together, keeping students with no company ID"
+"0","students_companies <-"
+"0","students %>% left_join(companies)"
+"2","Joining, by = ""company_ID""
+"

@@ -1,0 +1,5 @@
+"0","```r
+basic_data <-
+all_year_app_values %>%
+  select(-c(userType, sessionCount, daysSinceLastSession, country))
+```"

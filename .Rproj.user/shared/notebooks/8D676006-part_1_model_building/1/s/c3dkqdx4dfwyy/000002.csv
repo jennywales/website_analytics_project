@@ -1,0 +1,11 @@
+"0","```r
+#Split smaller data into training and test set
+shuffle_index <- sample(1:nrow(basic_data))
+shuffled_data<- basic_data[shuffle_index, ]
+
+n_data <- nrow(shuffled_data)
+test_index <- sample(1:n_data, size = n_data*0.2)
+
+test_small  <- slice(shuffled_data, test_index)
+train_small <- slice(shuffled_data, -test_index)
+```"

@@ -1,0 +1,4 @@
+"0","#Select only app values"
+"0","date_completions <- "
+"0","three_year_app_values %>%"
+"0","  dplyr::select(goal9Completions)"

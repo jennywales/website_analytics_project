@@ -1,0 +1,4 @@
+"0","#Check for students that have unusual ages - 0 probably means NA - keep in mind when "
+"0","#looking at mean age"
+"0","students %>%"
+"0","  filter(age < 20)"

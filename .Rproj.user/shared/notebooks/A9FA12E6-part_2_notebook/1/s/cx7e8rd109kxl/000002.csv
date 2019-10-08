@@ -1,0 +1,3 @@
+"0","#Check NAs for date - again large amounts NA - be careful in using"
+"0","companies %>%"
+"0","  filter(is.na(date_became_partner))"

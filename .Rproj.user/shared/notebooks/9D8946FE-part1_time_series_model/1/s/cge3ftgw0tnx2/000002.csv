@@ -1,0 +1,2 @@
+"0","#Create monthly time series"
+"0","completions_month_ts <- ts(month, frequency = 12, start = c(2016, 1))"

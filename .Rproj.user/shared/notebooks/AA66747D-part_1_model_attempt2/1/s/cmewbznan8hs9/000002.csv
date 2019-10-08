@@ -1,0 +1,11 @@
+"0","```r
+third_nine_variables <- 
+google_analytics(my_ga_id, 
+                 date_range = c(\"2017-04-01\", \"2019-03-31\"), 
+                 metrics = c(\"ga:goal9Completions\", \"ga:sessions\"), 
+                 dimensions = c(\"ga:city\", \"ga:longitude\", 
+                                \"ga:latitude\", \"ga:deviceCategory\"
+                                ), max = -1)
+```"
+"1","2019-09-25 21:07:04> Downloaded [7633] rows from a total of [7633].
+"

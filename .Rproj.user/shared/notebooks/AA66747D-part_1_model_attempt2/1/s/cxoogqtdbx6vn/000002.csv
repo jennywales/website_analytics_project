@@ -1,0 +1,27 @@
+"0","```r
+mod4d <- lm(goal9Completions ~ userAgeBracket, data = fourth_nine_variables)
+summary(mod4d) 
+```"
+"1","
+Call:
+lm(formula = goal9Completions ~ userAgeBracket, data = fourth_nine_variables)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.17184 -0.17184 -0.07749 -0.04977  2.92251 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(>|t|)    
+(Intercept)          0.12654    0.02102   6.021 1.94e-09 ***
+userAgeBracket25-34  0.04530    0.02345   1.931  0.05353 .  
+userAgeBracket35-44 -0.04905    0.02436  -2.013  0.04419 *  
+userAgeBracket45-54 -0.07677    0.02767  -2.775  0.00556 ** 
+userAgeBracket55-64 -0.12654    0.06913  -1.831  0.06725 .  
+userAgeBracket65+   -0.12654    0.17048  -0.742  0.45798    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3783 on 3061 degrees of freedom
+Multiple R-squared:  0.0179,	Adjusted R-squared:  0.0163 
+F-statistic: 11.16 on 5 and 3061 DF,  p-value: 1.123e-10
+"

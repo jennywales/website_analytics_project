@@ -1,0 +1,3 @@
+"0","#Detrend ts"
+"0","completions_month_ts_diff <- diff(completions_month_ts)"
+"0","plot(completions_month_ts_diff)"

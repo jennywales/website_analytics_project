@@ -1,0 +1,7 @@
+"0","#See who isn't hiring each year"
+"0","non_hiring_companies %>%"
+"0","  filter(!industry == ""n/a"") %>%"
+"0","  filter(!is.na(year)) %>%"
+"0","  group_by(industry, year) %>%"
+"0","  summarise(count = n()) %>%"
+"0","  arrange(desc(count))"

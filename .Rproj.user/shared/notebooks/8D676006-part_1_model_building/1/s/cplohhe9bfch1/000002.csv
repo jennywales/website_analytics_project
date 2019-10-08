@@ -1,0 +1,6 @@
+"0","```r
+train_large <- 
+train_large %>%
+  mutate(sessionCount = as.numeric(sessionCount)) %>%
+  mutate(daysSinceLastSession = as.numeric(daysSinceLastSession))
+```"

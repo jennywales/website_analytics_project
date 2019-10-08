@@ -1,0 +1,51 @@
+"0","```r
+mod3b <- lm(goal9Completions ~ 1+month+sessions+goal3Completions+goal3Completions:month+userType+daysSinceLastSession, 
+            data = train_large)
+summary(mod3b) 
+```"
+"1","
+Call:
+lm(formula = goal9Completions ~ 1 + month + sessions + goal3Completions + 
+    goal3Completions:month + userType + daysSinceLastSession, 
+    data = train_large)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.28596 -0.01507 -0.01174 -0.00549  2.85429 
+
+Coefficients:
+                            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)               -1.413e-04  1.981e-03  -0.071 0.943126    
+month02                   -2.705e-03  2.394e-03  -1.130 0.258410    
+month03                    5.211e-04  2.283e-03   0.228 0.819430    
+month04                    6.772e-04  2.381e-03   0.284 0.776131    
+month05                    1.628e-04  2.376e-03   0.069 0.945377    
+month06                   -1.714e-03  2.473e-03  -0.693 0.488139    
+month07                   -2.500e-03  2.381e-03  -1.050 0.293802    
+month08                    3.486e-03  2.369e-03   1.471 0.141251    
+month09                    2.519e-03  2.345e-03   1.074 0.282799    
+month10                   -4.366e-03  2.373e-03  -1.840 0.065757 .  
+month11                   -4.634e-03  2.399e-03  -1.932 0.053405 .  
+month12                   -3.313e-03  2.556e-03  -1.296 0.194921    
+sessions                   1.111e-03  3.926e-05  28.284  < 2e-16 ***
+goal3Completions          -7.364e-04  7.127e-03  -0.103 0.917712    
+userTypeReturning Visitor  1.409e-02  1.291e-03  10.912  < 2e-16 ***
+daysSinceLastSession      -1.700e-04  1.940e-05  -8.760  < 2e-16 ***
+month02:goal3Completions   6.039e-02  1.024e-02   5.897 3.72e-09 ***
+month03:goal3Completions   1.748e-01  9.106e-03  19.200  < 2e-16 ***
+month04:goal3Completions   1.584e-03  1.055e-02   0.150 0.880648    
+month05:goal3Completions   4.928e-02  1.056e-02   4.666 3.07e-06 ***
+month06:goal3Completions  -8.325e-03  8.422e-03  -0.988 0.322955    
+month07:goal3Completions   6.966e-02  1.071e-02   6.506 7.80e-11 ***
+month08:goal3Completions   3.800e-02  1.065e-02   3.567 0.000362 ***
+month09:goal3Completions   1.104e-01  1.732e-02   6.371 1.89e-10 ***
+month10:goal3Completions   5.192e-02  2.174e-02   2.389 0.016912 *  
+month11:goal3Completions  -6.487e-03  1.533e-02  -0.423 0.672183    
+month12:goal3Completions   6.356e-02  1.352e-02   4.701 2.60e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1147 on 55661 degrees of freedom
+Multiple R-squared:  0.05512,	Adjusted R-squared:  0.05468 
+F-statistic: 124.9 on 26 and 55661 DF,  p-value: < 2.2e-16
+"

@@ -1,0 +1,14 @@
+"0","```r
+fifth_nine_variables <- 
+google_analytics(my_ga_id, 
+                 date_range = c(\"2017-04-01\", \"2019-03-31\"), 
+                 metrics = c(\"ga:goal9Completions\", \"ga:sessions\", 
+                             \"ga:goal3Completions\", \"ga:goal5Completions\",
+                             \"ga:goal12Completions\"), 
+                 dimensions = c(\"ga:date\", \"ga:dayofWeek\", \"ga:userType\", 
+                                \"ga:sessionCount\", \"ga:dayssinceLastSession\", 
+                                \"ga:sessionDurationBucket\"
+                                ), max = -1, dim_filters = c(\"ga:UserGenderBracket\" = \"female\"))
+```"
+"1","Error: assert_that: missing values present in assertion
+"

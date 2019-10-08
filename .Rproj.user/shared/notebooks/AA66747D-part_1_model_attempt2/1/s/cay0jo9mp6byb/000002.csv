@@ -1,0 +1,23 @@
+"0","```r
+mod1j <- lm(goal9Completions ~ goal12Completions, data = first_nine_variables)
+summary(mod1j)
+```"
+"1","
+Call:
+lm(formula = goal9Completions ~ goal12Completions, data = first_nine_variables)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.9232 -0.0066 -0.0066 -0.0066 17.7992 
+
+Coefficients:
+                   Estimate Std. Error t value Pr(>|t|)    
+(Intercept)       0.0065721  0.0007015   9.368   <2e-16 ***
+goal12Completions 0.3055422  0.0038945  78.454   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1731 on 62035 degrees of freedom
+Multiple R-squared:  0.09026,	Adjusted R-squared:  0.09025 
+F-statistic:  6155 on 1 and 62035 DF,  p-value: < 2.2e-16
+"

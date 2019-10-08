@@ -1,0 +1,7 @@
+"0","#Break down students hired by size of company"
+"0","company_by_size <- "
+"0","students_companies %>%"
+"0","  filter(!is.na(company_size)) %>%"
+"0","  group_by(company_size) %>%"
+"0","  summarise(count = n())"
+"0","company_by_size"

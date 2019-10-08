@@ -1,0 +1,74 @@
+Problem to be solved:
+
+The client has a data set on industry partners and where students are employed after finishing the course. The client would like these questions to be answered, as well as any other interesting trends that can be identified:
+
+- What is the total amount of each sector where we place a student?
+- What is the gender split in these sectors?
+- What is the average age in these sectors?
+- What are the top 5 most popular sectors?
+- What are the bottom 5 sectors?
+- Who are the top 10 best business recruiting?
+- What are the trends for each year a student graduated vs business area placed?
+
+It is important to note that while the original data was real, the data used now is
+synthetic and has been created using Mockaroo.
+
+Planning
+
+- Load in data and join the data sets together using SQL
+- Explore the data and see if any cleaning is needed
+- For each question examine the data, get an answer and plot a visualisation - the client
+wants to keep it simple and has asked for pie charts
+- Identify anything else interesting
+- Create a presentation for the client
+
+Understanding the Data
+
+See part_2_notebook for this section in the Notebooks folder.
+The data comes in two excel files, one with details on students, such as gender, age and
+where they were employed after graduation. The other data set contains details on 
+companies who are partnered with the client, such as location, partner status and 
+industry. Both data sets are stored in the Inputs folder. After reading in each data set, I renamed some variables that had names with quotation marks in them. I also removed an identifier variable X1. I then looked through each variable for NAs and for anything else that didn't seem to fit in with the rest of the data. See comments in each section of code for my rationale as to why I either  removed NA's or left them in. For example if there were a lot of NA's in one variable but there was useful information in other variables for that entry,
+then I would leave the NA's in. After doing this for both data sets I then joined
+the two together by company ID and saved the data set as a csv.
+
+Analysing the Data
+
+See part_2_plots for this section in the Notebooks folder.
+I then went through the questions above and tried to answer them by using dplyr to
+filter and summarise the data. I then created a plot to visualise the answer I found.
+As the client requested I used a variety of plots and tried to make them colourful
+and easy to understand. Some questions required some manipulation of the data - for 
+finding the mean age I first had to replace entries where age = 0 with the mean age
+without those entries. I also removed outliers in age as it seems unlikely that people aged
+under 10 are studying with the client. I also tried to make my plots more interesting by adding extra analysis - for example I found the top ten hiring companies and then found
+which sectors these companies are in. For finding yearly trends for where students 
+were being hired, student that started the course at the end of the year would
+graduate the following year, and so had to be reclassified to that year. 
+
+I also looked at interesting areas outside the brief. For example I found the
+companies that weren't in the students data set and therefore hadn't hired anyone,
+and plotted which sectors weren't hiring compared to their overall proportion in 
+the data. I also broke down the sizes of all the companies and plotted that. I 
+looked at the location of companies and the partner status breakdown, as well as 
+a few other variables I though could be interesting.
+
+Concluding
+
+- Most students  are hired into Consumer Services, Finance and Technology sectors.
+- There's a 2 to 1 Male to Female split in most sectors.
+- There's an average age of 30-35 in most sectors.
+- The top hiring companies  are not necessarily in most popular sectors.
+- There are a lot of partner companies that aren’t hiring - why they aren't is an area
+for future analysis.
+- More analysis could be done into kind of roles students go into and 
+where partners are based.
+
+
+
+
+
+
+
+
+

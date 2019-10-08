@@ -1,0 +1,248 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Google Analytics only allows for a download of 9 dimensions at a time. I'm going
+to download three sets of 9 dimensions. For each set I'm going to check the correlation
+between goal9Completions and each variable. I will keep the variable with higher
+correlations and try putting them in a model. 
+
+
+```{r}
+library(tidyverse)
+library(GGally)
+library(googleAnalyticsR)
+library(glmulti)
+```
+
+```{r}
+#Get id for API
+ga_auth()
+```
+
+```{r}
+account_list <- ga_account_list()
+```
+
+```{r}
+account_list$viewId
+```
+
+```{r}
+my_ga_id <- 102407343
+```
+
+```{r}
+#Get data for first 9 possible predictors
+first_nine_variables <- 
+google_analytics(my_ga_id, 
+                 date_range = c("2017-04-01", "2019-03-31"), 
+                 metrics = c("ga:goal9Completions", "ga:sessions", 
+                             "ga:goal3Completions", "ga:goal5Completions",
+                             "ga:goal12Completions"), 
+                 dimensions = c("ga:userType", "ga:sessionCount", 
+                                "ga:daysSinceLastSession", "ga:sessionDurationBucket",
+                                "ga:referralPath", "ga:fullReferrer", 
+                                "ga:campaign", "ga:source", "ga:adContent"
+                                ), max = -1)
+```
+ 
+For each predictor I'm going to run a model and note the correlation. I will then 
+use the predictors with the highest correlations in my final model.
+```{r}
+mod1a <- lm(goal9Completions ~ userType, data = first_nine_variables)
+summary(mod1a)
+```
+
+```{r}
+first_nine_variables <-
+first_nine_variables %>%
+  mutate(sessionCount = as.numeric(sessionCount)) %>%
+  mutate(daysSinceLastSession = as.numeric(daysSinceLastSession)) %>%
+  mutate(sessionDurationBucket = as.numeric(sessionDurationBucket))
+  
+
+mod1b <- lm(goal9Completions ~ sessionCount, data = first_nine_variables)
+summary(mod1b)
+```
+
+```{r}
+mod1c <- lm(goal9Completions ~ daysSinceLastSession, data = first_nine_variables)
+summary(mod1c)
+```
+
+```{r}
+mod1d <- lm(goal9Completions ~ sessionDurationBucket, data = first_nine_variables)
+summary(mod1d)
+```
+
+```{r}
+mod1e <- lm(goal9Completions ~ adContent, data = first_nine_variables)
+summary(mod1e)
+```
+
+```{r}
+mod1f <- lm(goal9Completions ~ source, data = first_nine_variables)
+summary(mod1f)
+```
+
+```{r}
+mod1g <- lm(goal9Completions ~ sessions, data = first_nine_variables)
+summary(mod1g)
+```
+
+```{r}
+mod1h <- lm(goal9Completions ~ goal3Completions, data = first_nine_variables)
+summary(mod1h)
+```
+
+```{r}
+mod1i <- lm(goal9Completions ~ goal5Completions, data = first_nine_variables)
+summary(mod1i)
+```
+
+```{r}
+mod1j <- lm(goal9Completions ~ goal12Completions, data = first_nine_variables)
+summary(mod1j)
+```
+
+```{r}
+#Get second set of variables
+second_nine_variables <- 
+google_analytics(my_ga_id, 
+                 date_range = c("2017-04-01", "2019-03-31"), 
+                 metrics = c("ga:goal9Completions"), 
+                 dimensions = c("ga:goalCompletionLocation", "ga:goalPreviousStep1",
+                                "ga:goalPreviousStep2", "ga:goalPreviousStep3"
+                                ), max = -1)
+```
+
+```{r}
+mod2a <- lm(goal9Completions ~ goalCompletionLocation, data = second_nine_variables)
+summary(mod2a)
+```
+
+```{r}
+unique(second_nine_variables$goalPreviousStep3)
+```
+
+```{r}
+#Get third set of variables
+third_nine_variables <- 
+google_analytics(my_ga_id, 
+                 date_range = c("2017-04-01", "2019-03-31"), 
+                 metrics = c("ga:goal9Completions", "ga:sessions"), 
+                 dimensions = c("ga:city", "ga:longitude", 
+                                "ga:latitude", "ga:deviceCategory"
+                                ), max = -1)
+```
+
+```{r}
+third_nine_variables_scottish_cities <-
+third_nine_variables %>%
+  filter(city %in% c("Edinburgh", "Glasgow", "Aberdeen", "Inverness", "Stirling", 
+                     "Dundee"))
+```
+
+```{r}
+mod3a <- lm(goal9Completions ~ city, data = third_nine_variables_scottish_cities)
+summary(mod3a)
+```
+
+```{r}
+#Change lat and long into numeric values
+third_nine_variables <- 
+third_nine_variables %>%
+  mutate(longitude = as.numeric(longitude)) %>%
+  mutate(latitude = as.numeric(latitude))
+```
+
+```{r}
+mod3b <- lm(goal9Completions ~ longitude, data = third_nine_variables)
+summary(mod3b)
+```
+
+```{r}
+mod3c <- lm(goal9Completions ~ latitude, data = third_nine_variables)
+summary(mod3c)
+```
+
+```{r}
+mod3d <- lm(goal9Completions ~ deviceCategory, data = third_nine_variables)
+summary(mod3d)
+```
+
+```{r}
+#Get fourth set of variables
+fourth_nine_variables <- 
+google_analytics(my_ga_id, 
+                 date_range = c("2017-04-01", "2019-03-31"), 
+                 metrics = c("ga:goal9Completions", "ga:sessions"), 
+                 dimensions = c("ga:searchUsed", "ga:date","ga:month", 
+                                "ga:dayofWeek", "ga:userAgeBracket", 
+                                "ga:userGender"
+                                ), max = -1)
+```
+
+```{r}
+mod4a <- lm(goal9Completions ~ date, data = fourth_nine_variables)
+summary(mod4a) 
+```
+
+```{r}
+mod4b <- lm(goal9Completions ~ month, data = fourth_nine_variables)
+summary(mod4b) 
+```
+
+```{r}
+mod4c <- lm(goal9Completions ~ dayofWeek, data = fourth_nine_variables)
+summary(mod4c) 
+```
+
+```{r}
+mod4d <- lm(goal9Completions ~ userAgeBracket, data = fourth_nine_variables)
+summary(mod4d) 
+```
+
+```{r}
+mod4e <- lm(goal9Completions ~ userGender, data = fourth_nine_variables)
+summary(mod4e) 
+```
+
+```{r}
+#Get fifth set of variables
+fifth_nine_variables <- 
+google_analytics(my_ga_id, 
+                 date_range = c("2017-04-01", "2019-03-31"), 
+                 metrics = c("ga:goal9Completions", "ga:sessions", 
+                             "ga:goal3Completions", "ga:goal5Completions",
+                             "ga:goal12Completions"), 
+                 dimensions = c("ga:date", "ga:dayofWeek", "ga:userType", 
+                                "ga:sessionCount", "ga:dayssinceLastSession", 
+                                "ga:sessionDurationBucket"
+                                ), max = -1, dim_filters = c("ga:UserGenderBracket" = "female"))
+```
+
+```{r}
+#Change variables into numeric values
+fifth_nine_variables <-
+fifth_nine_variables %>%
+  mutate(sessionCount = as.numeric(sessionCount)) %>%
+  mutate(dayssinceLastSession = as.numeric(dayssinceLastSession)) %>%
+  mutate(sessionDurationBucket = as.numeric(sessionDurationBucket))
+
+#Try final model with variables that had the highest correlations
+mod5 <- lm(goal9Completions ~ sessions + goal3Completions + goal5Completions +
+             goal12Completions + date + dayofWeek + userType + sessionCount +
+             dayssinceLastSession + sessionDurationBucket,
+           data = fifth_nine_variables)
+summary(mod5)
+```
+
+
+
+
+
+
+

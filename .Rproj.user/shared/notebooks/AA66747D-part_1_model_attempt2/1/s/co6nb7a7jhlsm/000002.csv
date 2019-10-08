@@ -1,0 +1,23 @@
+"0","```r
+mod4a <- lm(goal9Completions ~ date, data = fourth_nine_variables)
+summary(mod4a) 
+```"
+"1","
+Call:
+lm(formula = goal9Completions ~ date, data = fourth_nine_variables)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.15324 -0.13507 -0.11557 -0.09276  2.90198 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  1.915e+00  5.792e-01   3.306 0.000958 ***
+date        -1.021e-04  3.291e-05  -3.102 0.001942 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3809 on 3065 degrees of freedom
+Multiple R-squared:  0.003129,	Adjusted R-squared:  0.002804 
+F-statistic:  9.62 on 1 and 3065 DF,  p-value: 0.001942
+"

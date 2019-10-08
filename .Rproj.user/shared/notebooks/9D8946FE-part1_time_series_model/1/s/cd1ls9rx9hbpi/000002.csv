@@ -1,0 +1,3 @@
+"0","#Plot seasonal trend of time series"
+"0","jpeg(""seasonal.jpg"")"
+"0","plot(month_tsc$seasonal, xlab = ""Date"", ylab = ""Seasonal Trend"")"

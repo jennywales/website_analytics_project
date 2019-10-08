@@ -1,0 +1,8 @@
+"0","#Try creating model including 2019 data"
+"0","monthly_present_completions <- "
+"0","present_app_values %>%"
+"0","  mutate(month_year = paste(year, month, sep = "" "")) %>%"
+"0","  group_by(month_year) %>%"
+"0","  summarise(month_completions = sum(goal9Completions))"
+"0",""
+"0","month_present <- monthly_present_completions$month_completions"

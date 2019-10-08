@@ -1,0 +1,16 @@
+"0","#Get data for FY2017-2018 for sessions and goal completions by date"
+"0","seventeen_eighteen_app_values <- read_csv(""../inputs/seventeen_eighteen_apps.csv"")"
+"2","Parsed with column specification:
+cols(
+  date = [34mcol_date(format = """")[39m,
+  month = [31mcol_character()[39m,
+  year = [32mcol_double()[39m,
+  dayofWeekName = [31mcol_character()[39m,
+  day = [31mcol_character()[39m,
+  goal9Completions = [32mcol_double()[39m,
+  sessions = [32mcol_double()[39m,
+  goal3Completions = [32mcol_double()[39m,
+  goal5Completions = [32mcol_double()[39m,
+  goal12Completions = [32mcol_double()[39m
+)
+"

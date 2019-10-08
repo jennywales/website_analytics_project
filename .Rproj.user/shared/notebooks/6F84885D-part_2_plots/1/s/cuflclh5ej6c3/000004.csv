@@ -1,0 +1,1 @@
+"0","non_hiring_companies$year <- format(as.Date(non_hiring_companies$date_became_partner, format=""%d/%m/%Y""),""%Y"")"

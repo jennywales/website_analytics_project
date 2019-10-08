@@ -1,0 +1,23 @@
+"0","```r
+mod3b <- lm(goal9Completions ~ longitude, data = third_nine_variables)
+summary(mod3b)
+```"
+"1","
+Call:
+lm(formula = goal9Completions ~ longitude, data = third_nine_variables)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+ -0.205  -0.127  -0.122  -0.086 236.879 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)   
+(Intercept) 0.1226667  0.0398306   3.080  0.00208 **
+longitude   0.0004634  0.0006058   0.765  0.44433   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 3.335 on 7631 degrees of freedom
+Multiple R-squared:  7.667e-05,	Adjusted R-squared:  -5.436e-05 
+F-statistic: 0.5851 on 1 and 7631 DF,  p-value: 0.4443
+"

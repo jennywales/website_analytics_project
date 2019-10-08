@@ -1,0 +1,4 @@
+"0","#Check NAs in partner status and compare to partner segmentation in companies data -"
+"0","#remove as no other info"
+"0","students %>%"
+"0","  filter(is.na(partner_status))"

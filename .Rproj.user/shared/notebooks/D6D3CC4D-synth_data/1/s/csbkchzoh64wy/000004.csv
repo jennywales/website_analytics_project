@@ -1,0 +1,3 @@
+"0","students_synth <- "
+"0","students2 %>%"
+"0","  dplyr::select(-c(`Job Title`, `Mailing City`, `Course Start Date`))"

@@ -1,0 +1,6 @@
+"0","#Find partner status breakdown"
+"0","partner_status_breakdown <- "
+"0","students_companies %>%"
+"0","  group_by(partner_status) %>%"
+"0","  summarise(count = n())"
+"0","partner_status_breakdown"

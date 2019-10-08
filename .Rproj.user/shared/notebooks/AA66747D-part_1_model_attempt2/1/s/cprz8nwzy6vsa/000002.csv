@@ -1,0 +1,30 @@
+"0","```r
+first_nine_variables <-
+first_nine_variables %>%
+  mutate(sessionCount = as.numeric(sessionCount)) %>%
+  mutate(daysSinceLastSession = as.numeric(daysSinceLastSession)) %>%
+  mutate(sessionDurationBucket = as.numeric(sessionDurationBucket))
+  
+
+mod1b <- lm(goal9Completions ~ sessionCount, data = first_nine_variables)
+summary(mod1b)
+```"
+"1","
+Call:
+lm(formula = goal9Completions ~ sessionCount, data = first_nine_variables)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.0149 -0.0148 -0.0148 -0.0142 22.9852 
+
+Coefficients:
+               Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   1.496e-02  7.702e-04  19.426  < 2e-16 ***
+sessionCount -6.566e-05  1.748e-05  -3.756 0.000173 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1815 on 62035 degrees of freedom
+Multiple R-squared:  0.0002274,	Adjusted R-squared:  0.0002113 
+F-statistic: 14.11 on 1 and 62035 DF,  p-value: 0.0001727
+"

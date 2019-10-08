@@ -1,0 +1,10 @@
+"0","```r
+#Plot partner status breakdown
+jpeg(\"partner_status.jpg\")
+pie(partner_status_breakdown$count, labels = partner_status_breakdown$partner_status, 
+    radius = 1, main = \"Partners vs Non Partners\", col = c(\"hotpink3\", \"turquoise3\"))
+dev.off()
+```"
+"1","null device 
+          1 
+"

@@ -1,0 +1,3 @@
+"0","#Create a ts"
+"0","present_ts <- ts(month_present, frequency = 12, start = c(2016, 1))"
+"0","plot(present_ts)"

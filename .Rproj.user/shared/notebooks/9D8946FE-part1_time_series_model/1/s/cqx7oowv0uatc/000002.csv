@@ -1,0 +1,2 @@
+"0","#Log ts"
+"0","completions_month_ts_log <- log(completions_month_ts)"

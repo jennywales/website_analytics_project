@@ -1,0 +1,3 @@
+"0","#Check NAs for company size - around half with NAs"
+"0","companies %>%"
+"0","  filter(is.na(company_size))"

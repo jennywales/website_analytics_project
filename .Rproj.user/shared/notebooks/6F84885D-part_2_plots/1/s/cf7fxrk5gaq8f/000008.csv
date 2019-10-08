@@ -1,0 +1,8 @@
+"0","#Find total students in each sector - remove NAs as small proportion of total"
+"0","sector_totals <-"
+"0","students_companies %>%"
+"0","  filter(!(industry == ""n/a"")) %>%"
+"0","  group_by(industry) %>%"
+"0","  summarise(count = n()) %>%"
+"0","  arrange(desc(count))"
+"0","sector_totals"

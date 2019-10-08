@@ -1,0 +1,328 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(forecast)
+library(tidyquant)
+library(zoo)
+library(tseries)
+library(googleAnalyticsR)
+library(lubridate)
+```
+
+```{r}
+#Get id for API
+ga_auth()
+```
+
+```{r}
+account_list <- ga_account_list()
+```
+
+```{r}
+account_list$viewId
+```
+
+```{r}
+my_ga_id <- 102407343
+```
+
+
+```{r}
+#Get data for 2016 - 2019
+three_year_app_values <- read_csv("../inputs/three_years_apps.csv")
+```
+
+```{r}
+#Plot apps over three years
+ggplot(three_year_app_values) +
+  aes(x = date, y = goal9Completions) +
+  geom_line()
+```
+
+```{r}
+#Select only app values
+date_completions <- 
+three_year_app_values %>%
+  dplyr::select(goal9Completions)
+```
+
+```{r}
+#Create a time series for apps
+completions_ts <- ts(date_completions, frequency = 365, start = c(2016, 1))
+```
+
+```{r}
+#Plot the time series
+plot.ts(completions_ts)
+```
+
+```{r}
+#Decompose the time series and plot it
+completions_tsc <- decompose(completions_ts, type = "additive")
+```
+
+```{r}
+plot(completions_tsc)
+```
+
+```{r}
+#Try logging and detrending ts
+completions_log <- log(completions_ts)
+completions_detrend <- diff(completions_log)
+plot(completions_detrend)
+
+completions_detrend2 <- diff(completions_ts)
+plot(completions_detrend2)
+```
+
+```{r}
+#Check if detrended ts is stationary
+adf.test(completions_detrend2, alternative="stationary", k=0)
+```
+
+```{r}
+#Get arima values for model
+auto.arima(completions_detrend2, approximation = FALSE)
+```
+
+```{r}
+#Check ACF
+acf(completions_detrend2)
+```
+
+```{r}
+#Check PACF
+pacf(completions_detrend2)
+```
+
+```{r}
+#Build first model using detrended ts
+fit1 <- arima(completions_detrend2, c(5, 0, 1))
+fit1
+```
+
+```{r}
+#Check residuals look OK
+checkresiduals(fit1)
+```
+
+```{r}
+#Predict apps - doesn't work
+pred1 <- predict(fit1, n.ahead = 365)
+ts.plot(completions_ts, pred1$pred, lty = c(1,3))
+```
+
+```{r}
+#Group apps by month as day doesn't work
+monthly_completions <- 
+three_year_app_values %>%
+  mutate(month_year = paste(year, month, sep = " ")) %>%
+  group_by(month_year) %>%
+  summarise(month_completions = sum(goal9Completions))
+
+month <- monthly_completions$month_completions
+```
+
+```{r}
+#Create monthly time series
+completions_month_ts <- ts(month, frequency = 12, start = c(2016, 1))
+```
+
+```{r}
+#Plot ts
+plot.ts(completions_month_ts)
+```
+
+```{r}
+#Decompose ts
+month_tsc <- decompose(completions_month_ts, type = "additive")
+plot(month_tsc)
+```
+
+
+```{r}
+#Detrend ts
+completions_month_ts_diff <- diff(completions_month_ts)
+plot(completions_month_ts_diff)
+```
+
+```{r}
+#Log ts
+completions_month_ts_log <- log(completions_month_ts)
+```
+
+```{r}
+#Run stationary tests - ts is stationary without doing anything to it
+adf.test(completions_month_ts_diff, alternative = "stationary", k=0)
+```
+
+
+```{r}
+adf.test(completions_month_ts_diff, alternative = "stationary", k=0)
+```
+
+```{r}
+adf.test(completions_month_ts, alternative = "stationary", k=0)
+```
+
+
+```{r}
+#Get ARIMA values for ts
+auto.arima(completions_month_ts, approximation = FALSE)
+```
+
+```{r}
+#Check ACF and PACF
+acf(completions_month_ts_diff)
+pacf(completions_month_ts_diff)
+```
+
+```{r}
+#Create monthly ts model - added season component as without it predictions are flat
+fit2 <- arima(completions_month_ts, c(1,0,0), seasonal = list(order = c(0,0,1), 
+                                                              period = 12))
+fit2
+```
+
+```{r}
+#Check residuals
+checkresiduals(fit2)
+```
+
+```{r}
+#Predict monthly apps for 2019
+pred2 <- predict(fit2, n.ahead = 12)
+jpeg("time_series.jpg")
+ts.plot(completions_month_ts, 0.62*pred2$pred, lty = c(1,3))
+dev.off()
+```
+
+```{r}
+#Get data up to present day
+present_app_values <- read_csv("../inputs/present_apps.csv")
+```
+
+
+```{r}
+#Get actual apps for 2019, group by month and plot
+nineteen_app_values <- 
+present_app_values %>%
+  filter(year == "2019") %>%
+  group_by(month) %>%
+  summarise(total = sum(goal9Completions))
+
+ggplot(nineteen_app_values) +
+  geom_point(aes(x = month, y = total))
+```
+
+```{r}
+#Compare predictions to actual 2019 values
+jpeg("comparison_ts.jpg")
+par(mfrow = c(1, 2))
+plot(pred2$pred, xlab = "Date", ylab = "Predicted Applications")
+plot(nineteen_app_values$month, nineteen_app_values$total, type = "l", xlab = "Date",
+     ylab = "Actual Applications")
+dev.off()
+```
+
+
+```{r}
+#Plot seasonal trend of time series
+jpeg("seasonal.jpg")
+plot(month_tsc$seasonal, xlab = "Date", ylab = "Seasonal Trend")
+dev.off()
+```
+
+
+
+```{r}
+#Try creating model including 2019 data
+monthly_present_completions <- 
+present_app_values %>%
+  mutate(month_year = paste(year, month, sep = " ")) %>%
+  group_by(month_year) %>%
+  summarise(month_completions = sum(goal9Completions))
+
+month_present <- monthly_present_completions$month_completions
+```
+
+```{r}
+#Create a ts
+present_ts <- ts(month_present, frequency = 12, start = c(2016, 1))
+plot(present_ts)
+```
+
+```{r}
+#Check if ts is stationary
+adf.test(present_ts, alternative = "stationary", k=0)
+```
+
+
+```{r}
+#Get ARIMA values for model
+auto.arima(present_ts, approximation = FALSE)
+```
+
+```{r}
+#Create model
+fit3 <- arima(present_ts, c(0,0,0), seasonal = list(order = c(0,0,1), 
+                                                   period = 12))
+fit3
+```
+
+```{r}
+#Predict apps for 2019/20
+pred3 <- predict(fit3, n.ahead = 12)
+ts.plot(present_ts, pred3$pred, lty = c(1,3))
+```
+
+```{r}
+#Try adding in sessions as a predictor to the model
+date_sessions <- 
+three_year_app_values %>%
+  dplyr::select(sessions)
+
+monthly_session <- 
+three_year_app_values %>%
+  mutate(month_year = paste(year, month, sep = " ")) %>%
+  group_by(month_year) %>%
+  summarise(month_sessions = sum(sessions))
+
+month_sessions <- monthly_session$month_sessions
+```
+
+
+```{r}
+#Create sessions ts
+sessions_ts <- ts(month_sessions, frequency = 12, start = c(2016, 1))
+```
+
+
+
+```{r}
+#Add sessions ts as predictor to monthly model
+fit4 <- arima(completions_month_ts, c(0,0,0), seasonal = list(order = c(0,0,1), 
+                                                              period = 12),
+              xreg = cbind(sessions_ts))
+fit4
+```
+
+
+
+
+```{r}
+#Plot - no real difference
+new_sessions <- rnorm(12)
+pred4 <- predict(fit4, n.ahead = 12, newxreg = new_sessions)
+ts.plot(completions_month_ts, pred4$pred, lty = c(1,3))
+```
+
+
+
+
+
+

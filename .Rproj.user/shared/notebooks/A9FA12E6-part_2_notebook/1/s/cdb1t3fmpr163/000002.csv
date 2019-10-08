@@ -1,0 +1,3 @@
+"0","#Check for NAs in mailing city - leave as could be filled in by company data"
+"0","students %>%"
+"0","  filter(is.na(mailing_city))"

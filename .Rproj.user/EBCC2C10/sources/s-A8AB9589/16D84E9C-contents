@@ -1,0 +1,122 @@
+Problem to be solved:
+
+The client would like to be able to predict application volumes for a course for a given month. They suggest that there may be a correlation between traffic volumes on the website and application volumes. Other metrics may be info session clicks and info pack submissions. They would like these questions answered:
+
+1) Are there trends or seasonal patterns in the metrics (sessions, booking info sessions, info pack submissions and applications)? e.g. are particular days of the week more popular for people applying or booking info sessions?
+2) Compare FY 2017/2018 and 2018/2019 for the metrics. 
+3) Predict 2019/2020 for the above metrics
+4) Correlation between trends in these metrics. 
+
+The audience for the output is a marketing professional who needs to present data to a leadership team. 
+
+Planning:
+
+- Learn how to use Google Analytics
+- Load in data from GA into R
+- Explore data and see if any cleaning/manipulation is necessary
+- Look for patterns/trends for metrics - plot any that are found
+- Compare 2017 to 2018 - plot differences
+- Split data into training and test sets
+- Build a model to predict application volumes
+- Test accuracy of predictions of model using test data and stats methods
+- Visualise predictions and identify correlations
+- Create presentation - possibly in RMarkdown?
+
+Understanding the Data
+
+Important Note: the data for this project was originally downloaded using Google
+Analytics as described below. For confidentiality reasons the data you see now
+has been synthesised using synthpop.
+
+See part_1_notebook for this section in the Notebooks folder.
+All the data for the website is held in Google Analytics, and so had to be
+downloaded each time by using the package googleAnalyticsR. After setting up
+ids and accessing the API, I first downloaded the data for FY2017/18. Google
+Analytics requires you to set dimensions and metrics for each download, where
+metrics are variables, and dimensions are characteristics of each variable. For 
+reference these are the metrics needed for analysis:
+
+goal9Completions = application volumes
+goal3Completions = info session clicks (Glasgow)
+goal5Completions = info session clicks (Edinburgh)
+goal12Completions = info pack applications
+sessions = traffic volumes
+
+I also downloaded the same data for FY2018/19, and later downloaded data for all
+three full years for model building.
+
+Analysing the Data
+
+See part_1_notebook for this section in the Notebooks folder.
+I first explored seasonal trends in the data, looking at which days of the week 
+were most popular for applying, as well as which days of the month. I also looked at each month and compared it to the target of 45 applications per month. I also compared different metrics to application volumes for each year to visualise the relationship between them. I also found the correlations between each metric and application volumes. I plotted each
+metric over both years to show the trends over time.
+
+Modelling the Data
+
+See part_1_time_series_model for the final model.
+
+I first tried to build a linear model to predict application values for 2019. I downloaded
+data for 2017 - 2019 and split the set into a training and test set. I then ran 
+glmulti to try to automatically get the best model. This is the model that it came up with:
+
+goal9Completions~1+month+sessions+goal3Completions+goal3Completions:month
+
+I then tried to increase the r2 of the model by adding in variables I thought could
+be a good predictor of applications, such as UserType, sessionCount, dayssincelastsession
+and country. None of the models managed to produce an r2 above 6%, which is 
+no good for predictions.
+
+I then started again and tried to broaden the variables I was looking at as possible
+predictors. Here I ran into problems with Google Analytics. When downloading data,
+Google Analytics only allows you to specify 9 dimensions each time. I therefore couldn't
+download all the possible dimensions that could be predictors at once. I also couldn't download 9 at a time and then join them, as different dimensions produce different
+data sets with no common variables. I decided to look through the list of dimensions
+and pick ones that were more likely to predict applications. I came up with a list of 28.
+I then ran a model using each predictor and noted the correlation with applications.
+Finally I ran a model using the variables with the highest correlations:
+
+goal9Completions ~ sessions + goal3Completions + goal5Completions +
+             goal12Completions + date + dayofWeek + userType + sessionCount +
+             dayssinceLastSession + sessionDurationBucket
+             
+This model had an even worse r2 of under 2%. I then gave up on linear models and moved
+to a time series model.
+
+For the time series model I downloaded data for 2016 to 2019, as more data is needed
+for a more accurate model. I then created a time series for applications with a daily
+frequency and plotted it. After checking that the data was stationary, I then found the
+ARIMA values and predicted applications for 2019. This model didn't work, as predictions 
+were flat. 
+
+I repeated the process, but this time on a monthly basis. This model worked, but only 
+if I manually added in a seasonal component, as auto.arima didn't recognise the 
+seasonal trend that was there. This model produced predictions that matched the trends
+of the previous years. As I had data for the first 8 months of 2019 I then compared 
+my predictions to the actual data. I also tried creating a model using the data for
+2019, but ran out of time to properly finish it. I also tried adding in an
+additional predictor of sessions to my model, but it didn't seem to change anything.
+
+Concluding
+
+There are definite seasonal trends for applications and sessions -   an increase in 
+Summer and Winter. May, August and November are the most popular months to apply. Saturday  is the most popular day to apply.
+
+There may be a relationship between info pack requests and applications.
+
+I couldn't get a linear model to produce a high enough r2, and my time series model
+did not match the actual data for 2019. If I had more time and could work around the limits of Google Analytics, it might be possible to create a linear model using other
+variables that I didn't have time to explore. It might also be possible to improve the time
+series model with more years of data.
+
+
+
+
+
+
+
+
+
+
+
+

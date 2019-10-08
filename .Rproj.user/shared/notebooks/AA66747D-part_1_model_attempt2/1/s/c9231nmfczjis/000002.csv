@@ -1,0 +1,4 @@
+"0","```r
+mod1e <- lm(goal9Completions ~ adContent, data = first_nine_variables)
+summary(mod1e)
+```"

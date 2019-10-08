@@ -1,0 +1,417 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(ggwordcloud)
+```
+
+```{r}
+#Read in the data
+setwd('/Users/user/Desktop/ga_project')
+students_companies <- read_csv("./outputs/student_companies.csv")
+```
+
+
+```{r}
+summary(students_companies)
+```
+
+What is the total amount of each sector where we place a student?
+
+```{r}
+#Find total students in each sector - remove NAs as small proportion of total
+sector_totals <-
+students_companies %>%
+  filter(!(industry == "n/a")) %>%
+  group_by(industry) %>%
+  summarise(count = n()) %>%
+  arrange(desc(count))
+sector_totals
+```
+
+```{r}
+#Create plot of total students in each sectorx
+ggplot(sector_totals) +
+  aes(x = reorder(industry, count), y = count) +
+  geom_col() +
+  coord_flip()
+```
+
+What is the gender split in these sectors?
+
+
+```{r}
+#Get overall gender split - remove 2 NAs and 1 prefer not to say
+total_gender <-
+students_companies %>%
+  filter(!is.na(gender)) %>%
+  filter(gender != "Prefer not to say") %>%
+  group_by(gender) %>%
+  summarise(count = n())
+total_gender
+```
+
+```{r}
+#Make an overall gender pie chart
+jpeg("gender_piechart.jpg")
+pie(total_gender$count, labels = total_gender$gender, radius = 1, 
+    col = c("mediumpurple1", "springgreen2"))
+dev.off()
+```
+
+```{r}
+#Find gender ratio in each sector - remove "Prefer not to say" as only one entry
+sector_by_gender <-
+students_companies %>%
+  filter(!industry == "n/a") %>%
+  filter(!is.na(gender)) %>%
+  filter(gender != "Prefer not to say") %>%
+  group_by(industry, gender) %>%
+  summarise(count = n())
+sector_by_gender
+```
+
+```{r}
+#Create a plot splitting each sector by gender
+ggplot(sector_by_gender) +
+  aes(x = reorder(industry, count), y = count, fill = gender) +
+  geom_col() +
+  coord_flip() +
+  labs(title = "Students Hired by Sector, with Gender Split", x = "Sector",
+       y = "Number of Students") +
+  scale_fill_manual(name = "Gender", values = c("mediumpurple1", "springgreen2")) +
+  theme(title = element_text(size = 12, face = "bold"),
+                  axis.title = element_text(size = 12, face = "bold"),
+                  axis.text = element_text(size = 10),
+                  legend.text = element_text(size = 10))
+ggsave("industry_gender.jpg")
+```
+
+What is the average age in these sectors?
+
+```{r}
+#Replace 0 ages with mean age
+students_companies$age <- ifelse(students_companies$age == 0, mean(students_companies$age), students_companies$age)
+```
+
+```{r}
+#Get average age by sector - remove 15 entries with outlying ages (probably entered wrong)
+sector_by_age <-
+students_companies %>%
+  filter(!industry == "n/a") %>%
+  filter(age != 3:5) %>%
+  group_by(industry) %>%
+  summarise(mean_age = mean(age))
+sector_by_age
+```
+
+```{r}
+#Plot mean age by sector
+ggplot(sector_by_age) +
+  aes(x = reorder(industry, mean_age), y = mean_age, fill = mean_age) +
+  geom_col() +
+  coord_flip() +
+  labs(title = "Average Age of Students by Sector", x = "Sector",
+       y = "Mean Age") +
+  scale_fill_gradient(low = "steelblue1", high = "steelblue4") +
+  theme(title = element_text(size = 12, face = "bold"),
+                  axis.title = element_text(size = 12, face = "bold"),
+                  axis.text = element_text(size = 10),
+                  legend.position = "none")
+ggsave("age_industry.jpg")
+```
+
+What are the top 5 most popular sectors?
+
+```{r}
+#Get top 5 and create wordcloud
+sector_totals %>%
+  top_n(5) %>%
+  ggplot(aes(label = industry, size = count, colour = industry)) +
+  geom_text_wordcloud() +
+  scale_color_brewer(palette = 2) +
+  theme(panel.background = element_rect(fill = "white"))
+ggsave("top_wordcloud.jpg")
+```
+
+What are the bottom 5 sectors?
+
+```{r}
+#Get botton 5 and create wordcloud?
+sector_totals %>%
+  tail(5) %>%
+  ggplot(aes(label = industry, size = count, colour = industry)) +
+  geom_text_wordcloud() +
+  scale_color_brewer(palette = 3) +
+  theme(panel.background = element_rect(fill = "white"))
+ggsave("bottom_wordcloud.jpg")
+```
+
+Who are the top 10 best business recruiting?
+
+```{r}
+#Get top ten companies - remove 23 NAs as small proportion of total. Then find out
+#which industries these companies are in.
+top_ten_companies <-
+students_companies %>%
+  filter(!is.na(company_ID)) %>%
+  group_by(company_ID) %>%
+  summarise(count = n()) %>%
+  arrange(desc(count)) %>%
+  top_n(10)
+top_ten_companies
+
+top_ten_industry <-
+students_companies %>%
+  select(company_ID, industry) %>%
+  filter(company_ID %in% top_ten_companies$company_ID) %>%
+  group_by(company_ID, industry) %>%
+  summarise(count = n()) %>%
+  arrange(desc(count))
+top_ten_industry 
+```
+
+```{r}
+#Plot top ten companies with industries
+ggplot(top_ten_industry) +
+  aes(x = reorder(company_ID, count), y = count, fill = industry) +
+  geom_col() +
+  coord_flip() +
+  scale_fill_discrete(name = "Sector") +
+  labs(title = "Top Ten Companies with Sectors", x = "Company ID",
+       y = "Number of Students Hired") +
+  theme(title = element_text(size = 12, face = "bold"),
+                  axis.title = element_text(size = 12, face = "bold"),
+                  axis.text = element_text(size = 10),
+                  legend.title = element_text(size = 10))
+ggsave("top_ten.jpg")
+```
+
+What are the trends for each year a student graduated vs business area placed?
+
+```{r}
+#Get years from date_became_partner variable - 195 NAs - remove as no other option
+students_companies$year <- format(as.Date(students_companies$course_start_date, format="%d/%m/%Y"),"%Y")
+```
+
+```{r}
+#Students who start the course after September will graduate in the next year - change
+#year to reflect this
+students_companies$month <- 
+format(as.Date(students_companies$course_start_date, format="%d/%m/%Y"), "%m")
+
+students_companies <- 
+students_companies %>%
+  mutate(year = case_when(
+    month %in% 9:12 & year == 2015 ~ 2016,
+    month %in% 9:12 & year == 2016 ~ 2017,
+    month %in% 9:12 & year == 2017 ~ 2018,
+    month %in% 9:12 & year == 2018 ~ 2019, 
+    TRUE ~ as.numeric(year)
+  ))
+```
+
+
+```{r}
+#Find hiring trend over time
+trends_sector <-
+students_companies %>%
+  filter(!is.na(year)) %>%
+  filter(!industry == "n/a") %>%
+  group_by(industry, year) %>%
+  summarise(count = n())
+trends_sector
+```
+
+```{r}
+#Plot trends over time
+ggplot(trends_sector) +
+  aes(x = year, y = count, group = industry, colour = industry) +
+  geom_line() +
+  scale_colour_discrete(name = "Sector") +
+  labs(title = "Students Hired over Time by Sector", x = "Year",
+       y = "Number of Students") +
+  theme(title = element_text(size = 12, face = "bold"),
+                  axis.title = element_text(size = 12, face = "bold"),
+                  axis.text = element_text(size = 10),
+                  legend.title = element_text(size = 10),
+        legend.position = "bottom")
+ggsave("hiring_trends.jpg")
+```
+
+New question - which companies aren't recruiting?
+
+```{r}
+#Find companies that aren't in the students dataset
+setwd('/Users/user/Desktop/ga_project')
+companies <- read_csv("./inputs/companies_synth.csv")
+students <- read_csv("./inputs/students_synth.csv")
+non_hiring_companies <- companies %>% anti_join(students, by = "company_ID")
+```
+
+```{r}
+non_hiring_companies$year <- format(as.Date(non_hiring_companies$date_became_partner, format="%d/%m/%Y"),"%Y")
+```
+
+```{r}
+#See who isn't hiring each year
+non_hiring_companies %>%
+  filter(!industry == "n/a") %>%
+  filter(!is.na(year)) %>%
+  group_by(industry, year) %>%
+  summarise(count = n()) %>%
+  arrange(desc(count))
+```
+
+```{r}
+#Find non-hiring companies sizes and sectors
+non_hiring_size <- 
+non_hiring_companies %>%
+  filter(!industry == "n/a") %>%
+  filter(!is.na(`Company Size`)) %>%
+  group_by(industry, `Company Size`) %>%
+  summarise(count = n()) %>%
+  arrange(desc(count))
+non_hiring_size
+```
+
+```{r}
+#Plot non-hiring companies
+ggplot(non_hiring_size) +
+  aes(x = reorder(industry, count), y = count, fill = `Company Size`) +
+  geom_col() +
+  coord_flip() +
+  scale_fill_discrete(name = "Company Size") +
+  labs(title = "Non-Hiring Companies by Sector and Size", x = "Industry",
+       y = "Number of Companies") +
+  theme(title = element_text(size = 12, face = "bold"),
+                  axis.title = element_text(size = 12, face = "bold"),
+                  axis.text = element_text(size = 10),
+                  legend.title = element_text(size = 10))
+ggsave("non_hiring_size.jpg")
+```
+
+```{r}
+#Find proportions of non-hiring companies in each sector compared to overall 
+#proportion in dataset
+non_hiring_industry <- 
+non_hiring_companies %>%
+  filter(!industry == "n/a") %>%
+  group_by(industry) %>%
+  summarise(count = n()) %>%
+  arrange(desc(count))
+non_hiring_industry
+
+company_by_industry <- 
+companies %>%
+  filter(!industry == "n/a") %>%
+  group_by(industry) %>%
+  summarise(count = n()) %>%
+  arrange(desc(count))
+company_by_industry
+```
+
+```{r}
+ggplot() +
+  geom_col(data = company_by_industry, mapping = aes(x = reorder(industry, count), 
+                                                     y = count, fill = "plum3")) +
+    geom_col(data = non_hiring_industry, mapping = aes(x = reorder(industry, count),
+                                                       y = count, fill = "olivedrab3")) +
+  coord_flip() +
+  scale_fill_manual(labels = c("Hiring", "Non-Hiring"), values = c("plum3", "olivedrab3"), 
+                    name = "Status") +
+  labs(title = "Proportion of Companies Hiring", x = "Industry",
+       y = "Number of Companies") +
+  theme(title = element_text(size = 12, face = "bold"),
+                  axis.title = element_text(size = 12, face = "bold"),
+                  axis.text = element_text(size = 10),
+                  legend.title = element_text(size = 10))
+ggsave("non_hiring_prop.jpg")
+```
+
+
+Company size?
+
+```{r}
+#Break down students hired by size of company
+company_by_size <- 
+students_companies %>%
+  filter(!is.na(company_size)) %>%
+  group_by(company_size) %>%
+  summarise(count = n())
+company_by_size
+```
+
+```{r}
+#Plot companies by size
+jpeg("companies_size.jpg")
+pie(company_by_size$count, labels = company_by_size$company_size, radius = 1, 
+    col = c("coral2", "deepskyblue2", "darkseagreen2", "darkgoldenrod2"), 
+    main = "Company Sizes")
+dev.off()
+```
+
+Company location?
+
+```{r}
+#Find location of hiring companies
+unique(students_companies$company_location)
+students_companies %>%
+  filter(!is.na(company_location)) %>%
+  group_by(company_location) %>%
+  summarise(count = n()) %>%
+  arrange(desc(count))
+```
+
+Partners vs non-partners?
+
+```{r}
+#Decide on which partner variable to use - choose parter status as easiest to visualise
+unique(students_companies$partner_status)
+unique(students_companies$company_status)
+unique(students_companies$partner_segmentation)
+```
+
+```{r}
+#Find partner status breakdown
+partner_status_breakdown <- 
+students_companies %>%
+  group_by(partner_status) %>%
+  summarise(count = n())
+partner_status_breakdown
+```
+
+
+```{r}
+#Plot partner status breakdown
+jpeg("partner_status.jpg")
+pie(partner_status_breakdown$count, labels = partner_status_breakdown$partner_status, 
+    radius = 1, main = "Partners vs Non Partners", col = c("hotpink3", "turquoise3"))
+dev.off()
+```
+
+```{r}
+#Check to see if partner segmentation any more interesting
+students_companies %>%
+  filter(!is.na(partner_segmentation)) %>%
+  group_by(partner_segmentation) %>%
+  summarise(count = n())
+```
+
+Job title?
+
+```{r}
+#Look at job titles - not really anything interesting to plot
+students_companies %>%
+  filter(!is.na(job_title)) %>%
+  filter(job_title != "Unknown") %>%
+  group_by(job_title, industry) %>%
+  summarise(count = n()) %>%
+  arrange(desc(count))
+```
+
+

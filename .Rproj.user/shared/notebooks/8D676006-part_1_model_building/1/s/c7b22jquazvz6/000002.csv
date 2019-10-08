@@ -1,0 +1,18 @@
+"0","```r
+all_year_app_values <- 
+google_analytics(my_ga_id, 
+                 date_range = c(\"2017-04-01\", \"2019-03-31\"), 
+                 metrics = c(\"ga:goal9Completions\", \"ga:sessions\", 
+                             \"ga:goal3Completions\", \"ga:goal5Completions\",
+                             \"ga:goal12Completions\"), 
+                 dimensions = c(\"ga:date\", \"ga:month\", 
+                                \"ga:dayofWeekName\", \"ga:userType\", 
+                                \"ga:sessionCount\", \"ga:daysSinceLastSession\",
+                                \"ga:country\"), max = -1)
+```"
+"1","2019-09-25 15:00:24> Downloaded [10000] rows from a total of [69610].
+2019-09-25 15:00:24> Fetching v4 data batch...
+2019-09-25 15:00:39> Fetching v4 data batch...
+2019-09-25 15:00:45> Downloaded [59610] rows from a total of [69610].
+2019-09-25 15:00:45> All data downloaded, total of [69610] - download time: 26.67 secs
+"

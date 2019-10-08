@@ -1,0 +1,2 @@
+"0","#Create sessions ts"
+"0","sessions_ts <- ts(month_sessions, frequency = 12, start = c(2016, 1))"

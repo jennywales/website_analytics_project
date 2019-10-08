@@ -1,0 +1,4 @@
+"0","#Plot - no real difference"
+"0","new_sessions <- rnorm(12)"
+"0","pred4 <- predict(fit4, n.ahead = 12, newxreg = new_sessions)"
+"0","ts.plot(completions_month_ts, pred4$pred, lty = c(1,3))"

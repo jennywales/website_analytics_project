@@ -1,0 +1,3 @@
+"0",""
+"0","completions_detrend2 <- diff(completions_ts)"
+"0","plot(completions_detrend2)"

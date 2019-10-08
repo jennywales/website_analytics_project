@@ -1,0 +1,202 @@
+---
+title: "Part 2 Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+#Set working directory and read in data
+companies <- read_csv("../inputs/companies_synth.csv")
+students <- read_csv("../inputs/students_synth.csv")
+```
+
+```{r}
+#Examine students data
+dim(students)
+summary(students)
+```
+
+```{r}
+#Check for NAs in age variable
+students %>%
+  filter(is.na(Age) | Age == 0)
+```
+
+```{r}
+#Remove id variable as it's an identifier variable
+students <-
+students %>%
+  select(-X1)
+```
+
+```{r}
+#Rename variables to get rid of quotation marks
+students <- students %>%
+  rename(partner_status = `Partner Status`,
+         gender = Gender, age = Age)
+colnames(students)
+```
+
+
+```{r}
+#See what's in partner status
+unique(students$partner_status)
+```
+
+```{r}
+#Check unusual partner status and remove - no other info in other variables
+students %>%
+  filter(partner_status == "Nikki Foxx")
+
+students %>%
+  filter(partner_status == "18/09/2019 12:28 PM")
+
+students <- students[-c(638:639), ]
+```
+
+```{r}
+#Check NAs in partner status and compare to partner segmentation in companies data -
+#remove as no other info
+students %>%
+  filter(is.na(partner_status))
+
+students <- students[-637, ]
+
+unique(students$partner_status)
+```
+
+```{r}
+#Check for NAs in job title - only one - remove as no company ID so can't use for anything
+unique(students$job_title)
+students %>%
+  filter(is.na(job_title))
+
+students <- students[-31, ]
+```
+
+```{r}
+#Check for na in job title
+students %>%
+  filter(is.na(job_title))
+```
+
+
+
+```{r}
+#Check for NAs in gender - only 2 but also have no age or job title - leave for now
+unique(students$gender)
+students %>%
+  filter(is.na(gender))
+
+students %>%
+  filter(gender == "Prefer not to say")
+```
+
+```{r}
+#Check for students that have unusual ages - 0 probably means NA - keep in mind when 
+#looking at mean age
+students %>%
+  filter(age < 20)
+```
+
+```{r}
+#Check for NAs in mailing city
+students %>%
+  filter(is.na(mailing_city))
+```
+
+```{r}
+#Check range of start dates
+unique(students$course_start_date)
+```
+
+```{r}
+#Check for NAs in company ID - leave for now but keep in mind
+students %>%
+  filter(is.na(company_ID))
+```
+
+```{r}
+colnames(companies)
+```
+
+
+```{r}
+#Remove id variable and rename variables
+companies <- 
+companies %>%
+  select(-X1)
+
+companies <- companies %>%
+  rename(partner_segmentation = `Partner Segmentation`,
+         company_status = `Company Status`, company_size = `Company Size`)
+```
+
+```{r}
+#Check industry for NAs
+companies %>%
+  filter(is.na(industry))
+```
+
+```{r}
+#Parter segementation is 2/3 NA - don't use for analysis
+unique(companies$partner_segmentation)
+companies %>%
+  filter(is.na(partner_segmentation))
+```
+
+```{r}
+#Check NAs for company_status
+companies %>%
+  filter(is.na(company_status))
+```
+
+```{r}
+#Check NAs for date
+companies %>%
+  filter(is.na(date_became_partner))
+```
+
+```{r}
+#Check NAs for company size - around half with NAs
+companies %>%
+  filter(is.na(company_size))
+```
+
+```{r}
+#Check NAs for company location
+
+companies %>%
+  filter(is.na(company_location))
+```
+
+```{r}
+#Check NAs for company id + remove one with no info
+companies <- 
+companies %>%
+  filter(!is.na(company_ID))
+```
+
+```{r}
+#Join datasets together, keeping students with no company ID
+students_companies <-
+students %>% left_join(companies)
+```
+
+```{r}
+summary(students_companies)
+```
+
+```{r}
+#Save clean dataset as csv
+write_csv(students_companies, "../outputs/student_companies.csv")
+```
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+"0","```r
+fifth_nine_variables <-
+fifth_nine_variables %>%
+  mutate(sessionCount = as.numeric(sessionCount)) %>%
+  mutate(dayssinceLastSession = as.numeric(dayssinceLastSession)) %>%
+  mutate(sessionDurationBucket = as.numeric(sessionDurationBucket))
+
+mod5 <- lm(goal9Completions ~ sessions + goal3Completions + goal5Completions +
+             goal12Completions + date + dayofWeek + userType + sessionCount +
+             dayssinceLastSession + sessionDurationBucket,
+           data = fifth_nine_variables)
+summary(mod5)
+```"
+"1","
+Call:
+lm(formula = goal9Completions ~ sessions + goal3Completions + 
+    goal5Completions + goal12Completions + date + dayofWeek + 
+    userType + sessionCount + dayssinceLastSession + sessionDurationBucket, 
+    data = fifth_nine_variables)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.16789 -0.01004 -0.00693 -0.00051  1.98953 
+
+Coefficients:
+                            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                4.593e-02  2.073e-02   2.215   0.0267 *  
+sessions                   1.550e-04  3.092e-05   5.013 5.37e-07 ***
+goal3Completions          -1.525e-03  2.493e-03  -0.612   0.5406    
+goal5Completions          -1.449e-03  2.326e-03  -0.623   0.5334    
+goal12Completions         -1.357e-03  2.203e-03  -0.616   0.5380    
+date                      -2.681e-06  1.175e-06  -2.282   0.0225 *  
+dayofWeek1                 6.396e-05  9.752e-04   0.066   0.9477    
+dayofWeek2                -8.129e-04  9.709e-04  -0.837   0.4024    
+dayofWeek3                 1.088e-03  9.745e-04   1.116   0.2644    
+dayofWeek4                -8.304e-04  9.723e-04  -0.854   0.3931    
+dayofWeek5                -2.260e-03  9.977e-04  -2.266   0.0235 *  
+dayofWeek6                 1.675e-04  1.122e-03   0.149   0.8813    
+userTypeReturning Visitor  1.132e-02  5.346e-04  21.169  < 2e-16 ***
+sessionCount              -6.325e-05  8.018e-06  -7.888 3.10e-15 ***
+dayssinceLastSession      -1.328e-04  1.251e-05 -10.616  < 2e-16 ***
+sessionDurationBucket      1.602e-05  5.108e-07  31.368  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.08434 on 120543 degrees of freedom
+Multiple R-squared:  0.01188,	Adjusted R-squared:  0.01176 
+F-statistic: 96.61 on 15 and 120543 DF,  p-value: < 2.2e-16
+"

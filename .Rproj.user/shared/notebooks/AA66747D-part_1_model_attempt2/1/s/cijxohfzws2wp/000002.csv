@@ -1,0 +1,28 @@
+"0","```r
+mod4c <- lm(goal9Completions ~ dayofWeek, data = fourth_nine_variables)
+summary(mod4c) 
+```"
+"1","
+Call:
+lm(formula = goal9Completions ~ dayofWeek, data = fourth_nine_variables)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.16992 -0.15310 -0.10097 -0.08541  2.87619 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.08541    0.02268   3.766 0.000169 ***
+dayofWeek1   0.06769    0.02819   2.401 0.016394 *  
+dayofWeek2   0.03840    0.02810   1.366 0.171919    
+dayofWeek3   0.08451    0.02823   2.994 0.002776 ** 
+dayofWeek4   0.01556    0.02820   0.552 0.581086    
+dayofWeek5  -0.01322    0.02866  -0.461 0.644574    
+dayofWeek6   0.00366    0.03316   0.110 0.912136    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3802 on 3060 degrees of freedom
+Multiple R-squared:  0.008243,	Adjusted R-squared:  0.006298 
+F-statistic: 4.239 on 6 and 3060 DF,  p-value: 0.0002949
+"

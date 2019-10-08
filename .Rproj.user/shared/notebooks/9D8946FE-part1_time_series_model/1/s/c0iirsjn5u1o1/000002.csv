@@ -1,0 +1,4 @@
+"0","#Try logging and detrending ts"
+"0","completions_log <- log(completions_ts)"
+"0","completions_detrend <- diff(completions_log)"
+"0","plot(completions_detrend)"

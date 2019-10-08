@@ -1,0 +1,31 @@
+"0","#Find companies that aren't in the students dataset"
+"0","setwd('/Users/user/Desktop/ga_project')"
+"2","The working directory was changed to /Users/user/Desktop/ga_project inside a notebook chunk. The working directory will be reset when the chunk is finished running. Use the knitr root.dir option in the setup chunk to change the working directory for notebook chunks."
+"0","companies <- read_csv(""./inputs/companies_synth.csv"")"
+"2","Parsed with column specification:
+cols(
+  X1 = [32mcol_double()[39m,
+  `Partner Segmentation` = [31mcol_character()[39m,
+  `Company Status` = [31mcol_character()[39m,
+  `Company Size` = [31mcol_character()[39m,
+  company_ID = [31mcol_character()[39m,
+  industry = [31mcol_character()[39m,
+  date_became_partner = [31mcol_character()[39m,
+  company_location = [31mcol_character()[39m
+)
+"
+"0","students <- read_csv(""./inputs/students_synth.csv"")"
+"2","Parsed with column specification:
+cols(
+  X1 = [32mcol_double()[39m,
+  student_ID = [31mcol_character()[39m,
+  `Partner Status` = [31mcol_character()[39m,
+  Gender = [31mcol_character()[39m,
+  Age = [32mcol_double()[39m,
+  company_ID = [31mcol_character()[39m,
+  job_title = [31mcol_character()[39m,
+  mailing_city = [31mcol_character()[39m,
+  course_start_date = [31mcol_character()[39m
+)
+"
+"0","non_hiring_companies <- companies %>% anti_join(students, by = ""company_ID"")"

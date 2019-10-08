@@ -1,0 +1,8 @@
+"0",""
+"0","company_by_industry <- "
+"0","companies %>%"
+"0","  filter(!industry == ""n/a"") %>%"
+"0","  group_by(industry) %>%"
+"0","  summarise(count = n()) %>%"
+"0","  arrange(desc(count))"
+"0","company_by_industry"

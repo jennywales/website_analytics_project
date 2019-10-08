@@ -1,0 +1,13 @@
+"0","```r
+fourth_nine_variables <- 
+google_analytics(my_ga_id, 
+                 date_range = c(\"2017-04-01\", \"2019-03-31\"), 
+                 metrics = c(\"ga:goal9Completions\", \"ga:sessions\"), 
+                 dimensions = c(\"ga:searchUsed\", \"ga:date\",\"ga:month\", 
+                                \"ga:dayofWeek\", \"ga:userAgeBracket\", 
+                                \"ga:userGender\"
+                                ), max = -1)
+```"
+"1","2019-09-25 21:22:22> Reading cache
+2019-09-25 21:22:22> Downloaded [3067] rows from a total of [3067].
+"

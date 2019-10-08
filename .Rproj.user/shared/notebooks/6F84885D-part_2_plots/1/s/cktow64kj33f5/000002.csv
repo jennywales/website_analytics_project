@@ -1,0 +1,20 @@
+"0","#Read in the data"
+"0","students_companies <- read_csv(""../outputs/student_companies.csv"")"
+"2","Parsed with column specification:
+cols(
+  student_ID = [31mcol_character()[39m,
+  partner_status = [31mcol_character()[39m,
+  gender = [31mcol_character()[39m,
+  age = [32mcol_double()[39m,
+  company_ID = [31mcol_character()[39m,
+  job_title = [31mcol_character()[39m,
+  mailing_city = [31mcol_character()[39m,
+  course_start_date = [31mcol_character()[39m,
+  partner_segmentation = [31mcol_character()[39m,
+  company_status = [31mcol_character()[39m,
+  company_size = [31mcol_character()[39m,
+  industry = [31mcol_character()[39m,
+  date_became_partner = [31mcol_character()[39m,
+  company_location = [31mcol_character()[39m
+)
+"

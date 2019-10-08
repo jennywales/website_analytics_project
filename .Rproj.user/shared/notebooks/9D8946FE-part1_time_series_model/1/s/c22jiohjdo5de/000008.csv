@@ -1,0 +1,2 @@
+"0","plot(nineteen_app_values$month, nineteen_app_values$total, type = ""l"", xlab = ""Date"","
+"0","     ylab = ""Actual Applications"")"

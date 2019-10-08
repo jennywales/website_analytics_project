@@ -1,0 +1,339 @@
+---
+title: "Part_1_notebook"
+output: html_notebook
+---
+
+```{r}
+library(googleAnalyticsR)
+library(keyring)
+library(ggplot2)
+library(tidyverse)
+library(lubridate)
+library(ggpubr)
+```
+
+```{r}
+#Get data for FY2017-2018 for sessions and goal completions by date
+seventeen_eighteen_app_values <- read_csv("../inputs/seventeen_eighteen_apps.csv")
+```
+
+```{r}
+summary(seventeen_eighteen_app_values)
+```
+
+```{r}
+#Plot application values against month 
+ggplot(seventeen_eighteen_app_values) +
+  aes(x = month, y = goal9Completions) +
+  geom_col() +
+  geom_hline(yintercept = 45, colour = "red")
+```
+
+```{r}
+#Plot app values against day of week
+ggplot(seventeen_eighteen_app_values) +
+  aes(x = dayofWeekName, y = goal9Completions) +
+  geom_col() 
+```
+
+```{r}
+#Plot app values  and sessions over entire year
+app_seventeen_plot <- ggplot() +
+  geom_line(data = seventeen_eighteen_app_values, 
+           aes(x = date, y = goal9Completions)) +
+  labs(x = "Date", y = "Applications")
+
+sessions_seventeen_plot <- ggplot() +
+  geom_line(data = seventeen_eighteen_app_values, 
+           aes(x = date, y = sessions)) +
+  labs(x = "Date", y = "Sessions")
+
+ggarrange(sessions_seventeen_plot, app_seventeen_plot,
+          ncol = 1, nrow = 2)
+ggsave("seventeen_sessions.jpg")
+```
+
+
+```{r}
+#Plot app values and info session clicks over entire year
+goal3_seventeen <- ggplot() +
+  geom_line(data = seventeen_eighteen_app_values, 
+           aes(x = date, y = goal3Completions, colour = "blue")) +
+  geom_line(data = seventeen_eighteen_app_values, 
+           aes(x = date, y = goal5Completions, colour = "red")) +
+  labs(x = "Date", y = "Info Session Clicks") +
+  theme(legend.position = "none")
+
+goal9_seventeen<- 
+  ggplot()+
+  geom_line(data = seventeen_eighteen_app_values, 
+           aes(x = date, y = goal9Completions)) +
+  labs(x = "Date", y = "Applications")
+
+ggarrange(goal3_seventeen, goal9_seventeen,
+          ncol = 1, nrow = 2)
+ggsave("seventeen_goal35.jpg")
+```
+
+```{r}
+#Plot app values  and info packs over entire year
+info_packs_seventeen_plot <- ggplot() +
+  geom_line(data = seventeen_eighteen_app_values, 
+           aes(x = date, y = goal12Completions, colour = "blue")) +
+  labs(x = "Date", y = "Info Pack Requests") +
+   theme(legend.position = "none")
+
+ggarrange(info_packs_seventeen_plot, goal9_seventeen,
+          ncol = 1, nrow = 2)
+ggsave("seventeen_goal12.jpg")
+```
+
+```{r}
+#Get correlations between metrics and app values
+cor(seventeen_eighteen_app_values$goal9Completions, seventeen_eighteen_app_values$sessions)
+cor(seventeen_eighteen_app_values$goal9Completions, seventeen_eighteen_app_values$goal3Completions)
+cor(seventeen_eighteen_app_values$goal9Completions, seventeen_eighteen_app_values$goal5Completions)
+cor(seventeen_eighteen_app_values$goal9Completions, seventeen_eighteen_app_values$goal12Completions)
+```
+Strongest correlation between sessions and app values but weak - info packs not
+really correlated, too weak
+
+
+```{r}
+#Get data for FY2018/2019
+eighteen_nineteen_app_values <-  read_csv("../inputs/eighteen_nineteen_apps.csv")
+```
+
+```{r}
+summary(eighteen_nineteen_app_values)
+```
+
+```{r}
+#Create data frame with both year's data
+all_years_app_values <- 
+rbind(seventeen_eighteen_app_values, eighteen_nineteen_app_values)
+
+all_years_app_values <- 
+all_years_app_values %>%
+  mutate(FY = case_when(
+    month %in% c("04", "05", "06", "07", "08", "09", "10", "11", "12") & year == "2017" ~ "2017/18",
+    month %in% c("01", "02", "03") & year == "2018" ~ "2017/18",
+    month %in% c("04", "05", "06", "07", "08", "09", "10", "11", "12") & year == "2018" ~ "2018/19",
+    month %in% c("01", "02", "03") & year == "2019" ~ "2018/19",
+  ))
+```
+
+```{r}
+sum(all_years_app_values$goal9Completions)
+```
+
+
+
+```{r}
+#Plot app values for each month and compare to last year
+all_years_app_values %>%
+  group_by(month, FY) %>%
+  summarise(total_apps = sum(goal9Completions)) %>%
+  ggplot() +
+  geom_col(aes(x = month, y = total_apps, fill = FY), position = "dodge") +
+  scale_fill_manual(values = c("violetred3", "springgreen3")) +
+  geom_hline(yintercept = 45) +
+  labs(title = "Applications per Month", x = "Month", y = "Number of Applications") +
+  theme(title = element_text(size = 12, face = "bold"),
+                  axis.title = element_text(size = 12, face = "bold"),
+                  axis.text = element_text(size = 10),
+                  legend.title = element_text(size = 10))
+ggsave("apps_month.jpg")
+```
+
+```{r}
+#Plot apps by day of the week and compare to last year
+all_years_app_values %>%
+  group_by(dayofWeekName, FY) %>%
+  summarise(total_apps = sum(goal9Completions)) %>%
+  ggplot() +
+  geom_col(aes(x = reorder(dayofWeekName, total_apps), y = total_apps, fill = FY), position = "dodge") +
+  scale_fill_manual(values = c("violetred3", "springgreen3")) +
+  labs(title = "Applications per Week Day", x = "Day", y = "Number of Applications") +
+  theme(title = element_text(size = 12, face = "bold"),
+                  axis.title = element_text(size = 12, face = "bold"),
+                  axis.text = element_text(size = 10),
+                  legend.title = element_text(size = 10))
+ggsave("apps_day.jpg")
+```
+
+```{r}
+sum(seventeen_eighteen_app_values$goal9Completions)
+sum(eighteen_nineteen_app_values$goal9Completions)
+```
+
+```{r}
+#Plot apps by day of the month and compare to last year
+all_years_app_values %>%
+  group_by(day, FY) %>%
+  summarise(total_apps = sum(goal9Completions)) %>%
+  ggplot() +
+  geom_col(aes(x = day, y = total_apps, fill = FY), position = "dodge") +
+  scale_fill_manual(values = c("violetred3", "springgreen3")) +
+  labs(title = "Applications per Month Day", x = "Day of Month", y = "Number of Applications") +
+  theme(title = element_text(size = 12, face = "bold"),
+                  axis.title = element_text(size = 12, face = "bold"),
+                  axis.text = element_text(size = 10),
+                  legend.title = element_text(size = 10))
+ggsave("apps_month_day.jpg")
+```
+
+```{r}
+#Plot sessions vs apps for FY2018/19
+app_eighteen_plot <- ggplot() +
+  geom_line(data = eighteen_nineteen_app_values, 
+           aes(x = date, y = goal9Completions))  +
+  labs(x = "Date", y = "Applications")
+
+sessions_eighteen_plot <- ggplot() +
+  geom_line(data = eighteen_nineteen_app_values, 
+           aes(x = date, y = sessions)) +
+  labs(x = "Date", y = "Sessions")
+
+ggarrange(sessions_eighteen_plot, app_eighteen_plot,
+          ncol = 1, nrow = 2)
+ggsave("eighteen_sessions.jpg")
+```
+
+```{r}
+#Plot app values and info session clicks over entire year
+info_clicks_eighteen_plot <- ggplot() +
+  geom_line(data = eighteen_nineteen_app_values, 
+           aes(x = date, y = goal3Completions, colour = "blue")) +
+  geom_line(data = eighteen_nineteen_app_values, 
+           aes(x = date, y = goal5Completions, colour = "red")) +
+  labs(x = "Date", y = "Info Session Clicks") +
+  theme(legend.position = "none")
+
+goal9_eighteen_plot <- 
+ggplot() +
+   geom_line(data = eighteen_nineteen_app_values, 
+           aes(x = date, y = goal9Completions)) +
+labs(x = "Date", y = "Applications")
+
+ggarrange(info_clicks_eighteen_plot, goal9_eighteen_plot,
+          ncol = 1, nrow = 2)
+ggsave("eighteen_goal35.jpg")
+```
+
+```{r}
+#Plot app values  and info packs over entire year
+info_packs_eighteen_plot <- ggplot() +
+  geom_line(data = eighteen_nineteen_app_values, 
+           aes(x = date, y = goal12Completions, colour = "red")) +
+  labs(x = "Date", y = "Info Pack Requests") +
+  theme(legend.position = "none")
+
+ggarrange(info_packs_eighteen_plot, goal9_eighteen_plot,
+          ncol = 1, nrow = 2)
+
+ggsave("eighteen_goal12.jpg")
+```
+
+```{r}
+#Get correlations between metrics and app values
+cor(eighteen_nineteen_app_values$goal9Completions, eighteen_nineteen_app_values$sessions)
+cor(eighteen_nineteen_app_values$goal9Completions, eighteen_nineteen_app_values$goal3Completions)
+cor(eighteen_nineteen_app_values$goal9Completions, eighteen_nineteen_app_values$goal5Completions)
+cor(eighteen_nineteen_app_values$goal9Completions, eighteen_nineteen_app_values$goal12Completions)
+```
+
+```{r}
+#Compare applications for each year
+ggplot() +
+  geom_line(data = seventeen_eighteen_app_values, aes(x = date, y = goal9Completions), colour = "violetred3") +
+  geom_line(data = eighteen_nineteen_app_values, aes(x = date, y = goal9Completions), colour = "springgreen3") +
+  labs(x = "Date", y = "Number of Applications") +
+  theme(title = element_text(size = 12, face = "bold"),
+                  axis.title = element_text(size = 12, face = "bold"),
+                  axis.text = element_text(size = 10),
+                  legend.title = element_text(size = 10))
+ggsave("apps_2years.jpg")
+```
+
+
+```{r}
+#Compare sessions for each year
+ggplot() +
+  geom_line(data = seventeen_eighteen_app_values, aes(x = date, y = sessions), colour = "violetred3") +
+  geom_line(data = eighteen_nineteen_app_values, aes(x = date, y = sessions), colour = "springgreen3") +
+  labs(x = "Date", y = "Number of Sessions") +
+  theme(title = element_text(size = 12, face = "bold"),
+                  axis.title = element_text(size = 12, face = "bold"),
+                  axis.text = element_text(size = 10),
+                  legend.title = element_text(size = 10))
+ggsave("session_2years.jpg")
+```
+
+```{r}
+#Compare info clicks for each year
+ggplot() +
+  geom_line(data = seventeen_eighteen_app_values, aes(x = date, y = goal3Completions), colour = "red") +
+  geom_line(data = seventeen_eighteen_app_values, aes(x = date, y = goal5Completions), colour = "blue") +
+  geom_line(data = eighteen_nineteen_app_values, aes(x = date, y = goal3Completions), colour = "yellow") +
+  geom_line(data = eighteen_nineteen_app_values, aes(x = date, y = goal5Completions), colour = "green") +
+  labs(x = "Date", y = "Number of Info Session Clicks") +
+  theme(title = element_text(size = 12, face = "bold"),
+                  axis.title = element_text(size = 12, face = "bold"),
+                  axis.text = element_text(size = 10),
+                  legend.title = element_text(size = 10))
+ggsave("goal35_2years.jpg")
+```
+
+```{r}
+#Compare info packs by year
+ggplot() +
+  geom_line(data = seventeen_eighteen_app_values, aes(x = date, y = goal12Completions), colour = "violetred3") +
+  geom_line(data = eighteen_nineteen_app_values, aes(x = date, y = goal12Completions), colour = "springgreen3") +
+  labs(x = "Date", y = "Number of Info Pack Requests") +
+  theme(title = element_text(size = 12, face = "bold"),
+                  axis.title = element_text(size = 12, face = "bold"),
+                  axis.text = element_text(size = 10),
+                  legend.title = element_text(size = 10))
+ggsave("goal12_2years.jpg")
+```
+
+```{r}
+#Plot apps for 2017/18
+all_years_app_values %>%
+  filter(FY == "2017/18")  %>%
+  ggplot() +
+  aes(x = date, y = goal9Completions) +
+  geom_line()
+```
+
+```{r}
+#Plot apps for 2018/19
+all_years_app_values %>%
+  filter(FY == "2018/19")  %>%
+  ggplot() +
+  aes(x = date, y = goal9Completions) +
+  geom_line()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

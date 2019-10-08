@@ -1,0 +1,3 @@
+"0","present_data <- "
+"0","present_app_values %>%"
+"0","  dplyr::select(c(goal9Completions, sessions, goal3Completions, goal5Completions, goal12Completions))"

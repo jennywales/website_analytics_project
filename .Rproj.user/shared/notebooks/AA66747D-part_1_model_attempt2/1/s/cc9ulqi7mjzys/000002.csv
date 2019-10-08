@@ -1,0 +1,23 @@
+"0","```r
+mod1d <- lm(goal9Completions ~ sessionDurationBucket, data = first_nine_variables)
+summary(mod1d)
+```"
+"1","
+Call:
+lm(formula = goal9Completions ~ sessionDurationBucket, data = first_nine_variables)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.1586 -0.0141 -0.0100 -0.0090 22.9910 
+
+Coefficients:
+                       Estimate Std. Error t value Pr(>|t|)    
+(Intercept)           9.012e-03  8.268e-04   10.90   <2e-16 ***
+sessionDurationBucket 1.521e-05  1.191e-06   12.77   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1813 on 62035 degrees of freedom
+Multiple R-squared:  0.002623,	Adjusted R-squared:  0.002607 
+F-statistic: 163.2 on 1 and 62035 DF,  p-value: < 2.2e-16
+"

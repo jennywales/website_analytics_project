@@ -1,0 +1,6 @@
+"0","#Plot apps for 2018/19"
+"0","all_years_app_values %>%"
+"0","  filter(FY == ""2018/19"")  %>%"
+"0","  ggplot() +"
+"0","  aes(x = date, y = goal9Completions) +"
+"0","  geom_line()"

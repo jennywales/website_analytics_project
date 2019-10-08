@@ -1,0 +1,3 @@
+"0","#Check industry for NAs - 153 so too large to remove"
+"0","companies %>%"
+"0","  filter(is.na(industry))"

@@ -1,0 +1,16 @@
+"0","#Get data for FY2018/2019"
+"0","eighteen_nineteen_app_values <-  read_csv(""../inputs/eighteen_nineteen_apps.csv"")"
+"2","Parsed with column specification:
+cols(
+  date = [34mcol_date(format = """")[39m,
+  month = [31mcol_character()[39m,
+  year = [32mcol_double()[39m,
+  dayofWeekName = [31mcol_character()[39m,
+  day = [31mcol_character()[39m,
+  goal9Completions = [32mcol_double()[39m,
+  sessions = [32mcol_double()[39m,
+  goal3Completions = [32mcol_double()[39m,
+  goal5Completions = [32mcol_double()[39m,
+  goal12Completions = [32mcol_double()[39m
+)
+"

@@ -1,0 +1,19 @@
+"0","```r
+first_nine_variables <- 
+google_analytics(my_ga_id, 
+                 date_range = c(\"2017-04-01\", \"2019-03-31\"), 
+                 metrics = c(\"ga:goal9Completions\", \"ga:sessions\", 
+                             \"ga:goal3Completions\", \"ga:goal5Completions\",
+                             \"ga:goal12Completions\"), 
+                 dimensions = c(\"ga:userType\", \"ga:sessionCount\", 
+                                \"ga:daysSinceLastSession\", \"ga:sessionDurationBucket\",
+                                \"ga:referralPath\", \"ga:fullReferrer\", 
+                                \"ga:campaign\", \"ga:source\", \"ga:adContent\"
+                                ), max = -1)
+```"
+"1","2019-09-25 20:43:43> Downloaded [10000] rows from a total of [62037].
+2019-09-25 20:43:44> Fetching v4 data batch...
+2019-09-25 20:43:54> Fetching v4 data batch...
+2019-09-25 20:43:55> Downloaded [52037] rows from a total of [62037].
+2019-09-25 20:43:55> All data downloaded, total of [62037] - download time: 14.50544 secs
+"

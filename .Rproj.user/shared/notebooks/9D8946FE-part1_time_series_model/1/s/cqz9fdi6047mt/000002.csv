@@ -1,0 +1,2 @@
+"0","#Create a time series for apps"
+"0","completions_ts <- ts(date_completions, frequency = 365, start = c(2016, 1))"

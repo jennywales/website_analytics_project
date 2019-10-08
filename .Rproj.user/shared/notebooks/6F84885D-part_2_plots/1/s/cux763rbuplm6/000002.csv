@@ -1,0 +1,11 @@
+"0","```r
+#Plot companies by size
+jpeg(\"companies_size.jpg\")
+pie(company_by_size$count, labels = company_by_size$company_size, radius = 1, 
+    col = c(\"coral2\", \"deepskyblue2\", \"darkseagreen2\", \"darkgoldenrod2\"), 
+    main = \"Company Sizes\")
+dev.off()
+```"
+"1","null device 
+          1 
+"

@@ -1,0 +1,8 @@
+"0","#Get overall gender split - remove 2 NAs and 1 prefer not to say"
+"0","total_gender <-"
+"0","students_companies %>%"
+"0","  filter(!is.na(gender)) %>%"
+"0","  filter(gender != ""Prefer not to say"") %>%"
+"0","  group_by(gender) %>%"
+"0","  summarise(count = n())"
+"0","total_gender"

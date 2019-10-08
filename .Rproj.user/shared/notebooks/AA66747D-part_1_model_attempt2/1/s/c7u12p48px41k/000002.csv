@@ -1,0 +1,6 @@
+"0","```r
+third_nine_variables_scottish_cities <-
+third_nine_variables %>%
+  filter(city %in% c(\"Edinburgh\", \"Glasgow\", \"Aberdeen\", \"Inverness\", \"Stirling\", 
+                     \"Dundee\"))
+```"

@@ -1,0 +1,15 @@
+"0","```r
+#Get id for API
+ga_auth()
+```"
+"1","2019-09-25 14:36:58> Default Google Project for googleAnalyticsR is set.  
+ This is shared with all googleAnalyticsR users. 
+ If making a lot of API calls, please: 
+ visit: https://bit.ly/2Evk6hn 
+ for instructions on setting your own Google Project 
+
+2019-09-25 14:36:58> Setting client.id from options(googleAuthR.client_id)
+Waiting for authentication in browser...
+Press Esc/Ctrl + C to abort
+Authentication complete.
+"

@@ -1,0 +1,2 @@
+"0","#Decompose the time series and plot it"
+"0","completions_tsc <- decompose(completions_ts, type = ""additive"")"

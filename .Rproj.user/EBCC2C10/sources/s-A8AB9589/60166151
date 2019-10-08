@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1570523743893.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "60166151",
+    "lastKnownWriteTime" : 1570522860,
+    "last_content_update" : 1570522860,
+    "path" : "~/Desktop/ga_project/documentation/part_2_doc",
+    "project_path" : "documentation/part_2_doc",
+    "properties" : {
+        "cursorPosition" : "45,26",
+        "ignored_words" : "csv,Analysing,dplyr,summarise,visualise,colourful,outliers\n",
+        "scrollLine" : "31"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "text"
+}

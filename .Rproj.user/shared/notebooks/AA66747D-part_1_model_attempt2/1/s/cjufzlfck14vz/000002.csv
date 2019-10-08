@@ -1,0 +1,24 @@
+"0","```r
+mod3d <- lm(goal9Completions ~ deviceCategory, data = third_nine_variables)
+summary(mod3d)
+```"
+"1","
+Call:
+lm(formula = goal9Completions ~ deviceCategory, data = third_nine_variables)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+ -0.172  -0.172  -0.172  -0.046 236.828 
+
+Coefficients:
+                     Estimate Std. Error t value Pr(>|t|)    
+(Intercept)           0.17213    0.05178   3.324 0.000891 ***
+deviceCategorymobile -0.12580    0.08289  -1.518 0.129138    
+deviceCategorytablet -0.13237    0.12682  -1.044 0.296616    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 3.335 on 7630 degrees of freedom
+Multiple R-squared:  0.0003622,	Adjusted R-squared:  0.0001002 
+F-statistic: 1.382 on 2 and 7630 DF,  p-value: 0.2511
+"

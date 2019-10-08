@@ -1,0 +1,170 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(fastDummies)
+library(modelr)
+library(tidyverse)
+library(GGally)
+library(leaps)
+library(glmulti)
+library(googleAnalyticsR)
+```
+
+```{r}
+#Get id for API
+ga_auth()
+```
+
+```{r}
+account_list <- ga_account_list()
+```
+
+```{r}
+account_list$viewId
+```
+
+```{r}
+my_ga_id <- 102407343
+```
+
+
+
+```{r}
+#Get data for 2017 - 2019
+all_year_app_values <- 
+google_analytics(my_ga_id, 
+                 date_range = c("2017-04-01", "2019-03-31"), 
+                 metrics = c("ga:goal9Completions", "ga:sessions", 
+                             "ga:goal3Completions", "ga:goal5Completions",
+                             "ga:goal12Completions"), 
+                 dimensions = c("ga:date", "ga:month", 
+                                "ga:dayofWeek", "ga:userType", 
+                                "ga:sessionCount", "ga:daysSinceLastSession",
+                                "ga:country"), max = -1)
+```
+
+I'm going to use glmulti to look at the basic metrics - goals and sessions - as
+predictors. So  that it doesn't crash I'm going to trim down the data before running it:
+
+```{r}
+#Trim down data set
+basic_data <-
+all_year_app_values %>%
+  select(-c(userType, sessionCount, daysSinceLastSession, country))
+```
+
+```{r}
+#Split smaller data into training and test set
+shuffle_index <- sample(1:nrow(basic_data))
+shuffled_data<- basic_data[shuffle_index, ]
+
+n_data <- nrow(shuffled_data)
+test_index <- sample(1:n_data, size = n_data*0.2)
+
+test_small  <- slice(shuffled_data, test_index)
+train_small <- slice(shuffled_data, -test_index)
+```
+
+```{r}
+#Split larger data set with more variables into training and test set
+shuffle_index <- sample(1:nrow(all_year_app_values))
+shuffled_data<- all_year_app_values[shuffle_index, ]
+
+n_data <- nrow(shuffled_data)
+test_index <- sample(1:n_data, size = n_data*0.2)
+
+test_large  <- slice(shuffled_data, test_index)
+train_large <- slice(shuffled_data, -test_index)
+```
+
+
+```{r}
+#Run glmulti
+glmulti_fit_small <- glmulti(
+  goal9Completions ~ ., 
+  data = train_small,
+  level = 2, 
+  minsize = 0, 
+  maxsize = 4, 
+  marginality = TRUE,
+  method = "h",
+  crit = bic, 
+  plotty = FALSE, 
+  report = TRUE, 
+  confsetsize = 100, 
+  fitfunction = lm 
+)
+```
+
+```{r}
+#Check glmulti model
+mod1 <- lm(goal9Completions~1+month+sessions+goal3Completions+goal3Completions:month, 
+           data = train_large)
+summary(mod1)
+```
+
+Use this model as a starting point. Try adding in UserType:
+
+```{r}
+mod1a <- lm(goal9Completions ~ 1+month+sessions+goal3Completions+goal3Completions:month+userType, 
+            data = train_large)
+summary(mod1a)
+```
+
+```{r}
+train_large <- 
+train_large %>%
+  mutate(sessionCount = as.numeric(sessionCount)) %>%
+  mutate(daysSinceLastSession = as.numeric(daysSinceLastSession))
+```
+
+Try adding in sessionCount, dayssincelastsession
+
+```{r}
+mod1b <- lm(goal9Completions ~ 1+month+sessions+goal3Completions+goal3Completions:month+sessionCount, 
+            data = train_large)
+summary(mod1b)
+```
+
+```{r}
+mod1c <- lm(goal9Completions ~ 1+month+sessions+goal3Completions+goal3Completions:month+daysSinceLastSession, 
+            data = train_large)
+summary(mod1c)
+```
+
+This is the best model - try adding sessions into this:
+mod1a <- lm(goal9Completions ~ 1+month+sessions+goal3Completions+goal3Completions:month+userType, 
+            data = train_large
+
+```{r}
+mod3a <- lm(goal9Completions ~ 1+month+sessions+goal3Completions+goal3Completions:month+userType+sessionCount, 
+            data = train_large)
+summary(mod3a)      
+```
+
+```{r}
+mod3b <- lm(goal9Completions ~ 1+month+sessions+goal3Completions+goal3Completions:month+userType+daysSinceLastSession, 
+            data = train_large)
+summary(mod3b) 
+```
+
+This model increases r2 - try adding country:
+
+```{r}
+mod4a <- lm(goal9Completions ~ 1+month+sessions+goal3Completions+goal3Completions:month+userType+daysSinceLastSession 
+            + country, 
+            data = train_large)
+summary(mod4a) 
+```
+
+This model is the best so far but only 5.7% r2? Will try downloading other variables?
+
+
+
+
+
+
+

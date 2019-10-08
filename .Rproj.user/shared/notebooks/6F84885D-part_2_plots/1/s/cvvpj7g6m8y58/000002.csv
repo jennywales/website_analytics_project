@@ -1,0 +1,12 @@
+"0","#Get top ten companies - remove 23 NAs as small proportion of total. Then find out"
+"0","#which industries these companies are in."
+"0","top_ten_companies <-"
+"0","students_companies %>%"
+"0","  filter(!is.na(company_ID)) %>%"
+"0","  group_by(company_ID) %>%"
+"0","  summarise(count = n()) %>%"
+"0","  arrange(desc(count)) %>%"
+"0","  top_n(10)"
+"2","Selecting by count
+"
+"0","top_ten_companies"

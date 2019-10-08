@@ -1,0 +1,4 @@
+"0","#Check NAs for company location - only 3 entries with no other info but leave in"
+"0","#for company analysis"
+"0","companies %>%"
+"0","  filter(is.na(company_location))"

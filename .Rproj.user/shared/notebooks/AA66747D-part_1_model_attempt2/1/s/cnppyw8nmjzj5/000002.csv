@@ -1,0 +1,33 @@
+"0","```r
+mod4b <- lm(goal9Completions ~ month, data = fourth_nine_variables)
+summary(mod4b) 
+```"
+"1","
+Call:
+lm(formula = goal9Completions ~ month, data = fourth_nine_variables)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.17842 -0.12287 -0.11180 -0.09091  2.89384 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.1223776  0.0225105   5.436 5.86e-08 ***
+month02     -0.0134282  0.0327204  -0.410   0.6815    
+month03      0.0460073  0.0316977   1.451   0.1468    
+month04      0.0004893  0.0316440   0.015   0.9877    
+month05      0.0210332  0.0326870   0.643   0.5200    
+month06     -0.0314685  0.0328564  -0.958   0.3383    
+month07     -0.0014099  0.0330317  -0.043   0.9660    
+month08      0.0560456  0.0332876   1.684   0.0923 .  
+month09     -0.0162132  0.0316707  -0.512   0.6087    
+month10     -0.0594147  0.0323029  -1.839   0.0660 .  
+month11     -0.0486449  0.0342720  -1.419   0.1559    
+month12     -0.0105764  0.0375082  -0.282   0.7780    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3807 on 3055 degrees of freedom
+Multiple R-squared:  0.00739,	Adjusted R-squared:  0.003816 
+F-statistic: 2.068 on 11 and 3055 DF,  p-value: 0.01951
+"

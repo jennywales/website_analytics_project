@@ -1,0 +1,11 @@
+"0","```r
+#Split larger data set with more variables into trainig and test set
+shuffle_index <- sample(1:nrow(all_year_app_values))
+shuffled_data<- all_year_app_values[shuffle_index, ]
+
+n_data <- nrow(shuffled_data)
+test_index <- sample(1:n_data, size = n_data*0.2)
+
+test_large  <- slice(shuffled_data, test_index)
+train_large <- slice(shuffled_data, -test_index)
+```"

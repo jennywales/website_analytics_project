@@ -1,0 +1,4 @@
+"0","```r
+mod2a <- lm(goal9Completions ~ goalCompletionLocation, data = second_nine_variables)
+summary(mod2a)
+```"

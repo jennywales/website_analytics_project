@@ -1,0 +1,47 @@
+"0","setwd('/Users/user/Desktop/ga_project')"
+"2","The working directory was changed to /Users/user/Desktop/ga_project inside a notebook chunk. The working directory will be reset when the chunk is finished running. Use the knitr root.dir option in the setup chunk to change the working directory for notebook chunks."
+"0","companies_mock <- read_csv(""./notebooks/MOCK_DATA.csv"")"
+"2","Parsed with column specification:
+cols(
+  industry = [31mcol_character()[39m,
+  date_became_partner = [31mcol_character()[39m,
+  company_location = [31mcol_character()[39m
+)
+"
+"0","companies <- read_csv(""./inputs/Companies.csv"")"
+"2","Missing column names filled in: 'X1' [1]"
+"2","Parsed with column specification:
+cols(
+  X1 = [32mcol_double()[39m,
+  Industry = [31mcol_character()[39m,
+  `Partner Segmentation` = [31mcol_character()[39m,
+  `Company Status` = [31mcol_character()[39m,
+  `Date became partner` = [31mcol_character()[39m,
+  `Company Size` = [31mcol_character()[39m,
+  `Company Location` = [31mcol_character()[39m,
+  company_ID = [31mcol_character()[39m
+)
+"
+"0","students <- read_csv(""./inputs/Students.csv"")"
+"2","Missing column names filled in: 'X1' [1]"
+"2","Parsed with column specification:
+cols(
+  X1 = [32mcol_double()[39m,
+  student_ID = [31mcol_character()[39m,
+  `Partner Status` = [31mcol_character()[39m,
+  `Job Title` = [31mcol_character()[39m,
+  Gender = [31mcol_character()[39m,
+  Age = [32mcol_double()[39m,
+  `Mailing City` = [31mcol_character()[39m,
+  `Course Start Date` = [31mcol_character()[39m,
+  company_ID = [31mcol_character()[39m
+)
+"
+"0","students_mock <- read_csv(""./notebooks/MOCK_DATA (1).csv"")"
+"2","Parsed with column specification:
+cols(
+  job_title = [31mcol_character()[39m,
+  mailing_city = [31mcol_character()[39m,
+  course_start_date = [31mcol_character()[39m
+)
+"

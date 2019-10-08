@@ -1,0 +1,191 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(dplyr)
+```
+
+```{r}
+setwd('/Users/user/Desktop/ga_project')
+companies_mock <- read_csv("./notebooks/MOCK_DATA.csv")
+companies <- read_csv("./inputs/Companies.csv")
+students <- read_csv("./inputs/Students.csv")
+students_mock <- read_csv("./notebooks/MOCK_DATA (1).csv")
+```
+
+```{r}
+companies2 <- cbind(companies, companies_mock)
+unique(companies2$industry)
+```
+
+```{r}
+companies_synth <- 
+companies2 %>%
+  dplyr::select(-c(Industry, `Date became partner`, `Company Location`))
+```
+
+```{r}
+students2 <- cbind(students, students_mock)
+```
+
+```{r}
+students_synth <- 
+students2 %>%
+  dplyr::select(-c(`Job Title`, `Mailing City`, `Course Start Date`))
+```
+
+```{r}
+write_csv(students_synth, "students_synth.csv")
+```
+
+```{r}
+write_csv(companies_synth, "companies_synth.csv")
+```
+
+```{r}
+library(synthpop)
+```
+
+```{r}
+seventeen_data <- 
+seventeen_eighteen_app_values %>%
+  dplyr::select(c(goal9Completions, sessions, goal3Completions, goal5Completions, goal12Completions))
+```
+
+```{r}
+summary(seventeen_data)
+```
+
+```{r}
+syn_seventeen <- syn(seventeen_data)
+```
+
+```{r}
+seventeeen_synth <- syn_seventeen$syn
+```
+
+```{r}
+summary(seventeeen_synth)
+```
+
+```{r}
+seventeen2 <- seventeen_eighteen_app_values %>%
+  dplyr::select(-c(goal9Completions, sessions, goal3Completions, goal5Completions, goal12Completions))
+```
+
+```{r}
+seventeen_mock <- cbind(seventeen2, seventeeen_synth)
+```
+
+```{r}
+write_csv(seventeen_mock, "seventeen_eighteen_apps.csv")
+```
+
+```{r}
+eighteen_data <- 
+eighteen_nineteen_app_values %>%
+  dplyr::select(c(goal9Completions, sessions, goal3Completions, goal5Completions, goal12Completions))
+```
+
+```{r}
+summary(eighteen_data)
+```
+
+```{r}
+syn_eighteen <- syn(eighteen_data)
+```
+
+```{r}
+eighteen_synth <- syn_eighteen$syn
+summary(eighteen_synth)
+```
+
+```{r}
+eighteen2 <- eighteen_nineteen_app_values %>%
+  dplyr::select(-c(goal9Completions, sessions, goal3Completions, goal5Completions, goal12Completions))
+```
+
+```{r}
+eighteen_mock <- cbind(eighteen2, eighteen_synth)
+```
+
+```{r}
+write_csv(eighteen_mock, "eighteen_nineteen_apps.csv")
+```
+
+```{r}
+three_years_data <- 
+three_year_app_values %>%
+  dplyr::select(c(goal9Completions, sessions, goal3Completions, goal5Completions, goal12Completions))
+```
+
+```{r}
+summary(three_years_data)
+```
+
+```{r}
+syn_three <- syn(three_years_data)
+```
+
+```{r}
+three_synth <- syn_three$syn
+summary(three_synth)
+```
+
+```{r}
+three2 <- three_year_app_values %>%
+  dplyr::select(-c(goal9Completions, sessions, goal3Completions, goal5Completions, goal12Completions))
+```
+
+```{r}
+three_mock <- cbind(three2, three_synth)
+```
+
+```{r}
+write_csv(three_mock, "three_years_apps.csv")
+```
+
+```{r}
+present_data <- 
+present_app_values %>%
+  dplyr::select(c(goal9Completions, sessions, goal3Completions, goal5Completions, goal12Completions))
+```
+
+```{r}
+summary(present_data)
+```
+
+```{r}
+syn_present <- syn(present_data)
+```
+
+```{r}
+present_synth <- syn_present$syn
+summary(present_synth)
+```
+
+```{r}
+present2 <- present_app_values %>%
+  dplyr::select(-c(goal9Completions, sessions, goal3Completions, goal5Completions, goal12Completions))
+```
+
+```{r}
+present_mock <- cbind(present2, present_synth)
+```
+
+```{r}
+write_csv(present_mock, "present_apps.csv")
+```
+
+
+
+
+
+
+
+
+
+

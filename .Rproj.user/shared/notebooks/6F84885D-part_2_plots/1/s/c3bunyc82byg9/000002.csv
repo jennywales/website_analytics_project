@@ -1,0 +1,5 @@
+"0","#Check to see if partner segmentation any more interesting"
+"0","students_companies %>%"
+"0","  filter(!is.na(partner_segmentation)) %>%"
+"0","  group_by(partner_segmentation) %>%"
+"0","  summarise(count = n())"

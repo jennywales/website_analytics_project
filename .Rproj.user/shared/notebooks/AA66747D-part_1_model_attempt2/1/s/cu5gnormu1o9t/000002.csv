@@ -1,0 +1,23 @@
+"0","```r
+mod4e <- lm(goal9Completions ~ userGender, data = fourth_nine_variables)
+summary(mod4e) 
+```"
+"1","
+Call:
+lm(formula = goal9Completions ~ userGender, data = fourth_nine_variables)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.14678 -0.14678 -0.14678 -0.06485  2.85322 
+
+Coefficients:
+               Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     0.06485    0.01163   5.574 2.70e-08 ***
+userGendermale  0.08193    0.01440   5.691 1.38e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3795 on 3065 degrees of freedom
+Multiple R-squared:  0.01046,	Adjusted R-squared:  0.01013 
+F-statistic: 32.39 on 1 and 3065 DF,  p-value: 1.38e-08
+"

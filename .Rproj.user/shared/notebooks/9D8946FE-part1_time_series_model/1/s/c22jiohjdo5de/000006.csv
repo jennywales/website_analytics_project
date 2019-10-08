@@ -1,0 +1,4 @@
+"0","#Compare predictions to actual 2019 values"
+"0","jpeg(""comparison_ts.jpg"")"
+"0","par(mfrow = c(1, 2))"
+"0","plot(pred2$pred, xlab = ""Date"", ylab = ""Predicted Applications"")"

@@ -1,0 +1,3 @@
+"0","#Predict apps for 2019/20"
+"0","pred3 <- predict(fit3, n.ahead = 12)"
+"0","ts.plot(present_ts, pred3$pred, lty = c(1,3))"

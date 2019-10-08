@@ -1,0 +1,27 @@
+"0","```r
+mod3a <- lm(goal9Completions ~ city, data = third_nine_variables_scottish_cities)
+summary(mod3a)
+```"
+"1","
+Call:
+lm(formula = goal9Completions ~ city, data = third_nine_variables_scottish_cities)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-80.667  -9.113  -1.000   0.333 145.333 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)  
+(Intercept)      5.250     27.092   0.194   0.8488  
+cityDundee      -3.583     41.384  -0.087   0.9321  
+cityEdinburgh   86.417     41.384   2.088   0.0531 .
+cityGlasgow     31.150     36.348   0.857   0.4041  
+cityInverness   -4.250     38.314  -0.111   0.9131  
+cityStirling    -4.583     41.384  -0.111   0.9132  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 54.18 on 16 degrees of freedom
+Multiple R-squared:  0.3098,	Adjusted R-squared:  0.09415 
+F-statistic: 1.437 on 5 and 16 DF,  p-value: 0.2646
+"

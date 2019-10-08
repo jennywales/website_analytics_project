@@ -1,0 +1,3 @@
+"0","#Decompose ts"
+"0","month_tsc <- decompose(completions_month_ts, type = ""additive"")"
+"0","plot(month_tsc)"
